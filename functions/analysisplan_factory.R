@@ -17,7 +17,7 @@ map_to_datatypes<-function(df,questionnaire){
   types[types_raw == "text"] <- "text"
   types[types_raw == "calculate"] <- "numerical"
   
-  types
+  return(types)
 }
 
 

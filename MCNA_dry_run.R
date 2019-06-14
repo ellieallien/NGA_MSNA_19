@@ -46,13 +46,17 @@ weighting <- surveyweights::weighting_fun_from_samplingframe(sampling.frame = sa
 design <- map_to_design(data = response, cluster_variable_name = "cluster", weighting_function = weighting)
 
 
-analysisplan <- read.csv("./input/analysisplan.csv", stringsAsFactors = F)
-short_ap <- analysisplan %>% filter(names != 0)
+analysisplan <- make_analysisplan_all_vars(df= response, questionnaire = questionnaire, repeat.for.variable = "state", independent.variable = "group", hypothesis.type = "group_difference")
+
+
+short_ap <- analysisplan[c(1:15),]
 
 
 case <- map_to_case("group_difference", "categorical", "categorical")
 result <- map_to_result(data = response, dependent.var = "mhm_material", independent.var = "state", case = case, cluster.variable.name = "cluster", weighting = weighting, questionnaire = questionnaire)
 
+
+final_result <- from_analysisplan_map_to_output(data = response, analysisplan = short_ap, weighting = weighting, cluster_variable_name = "cluster",questionnaire = questionnaire)
 
 result %>% map_to_labeled(., questionnaire = questionnaire) %>% .$summary.statistic  %>% map_to_file("./summary_stats.csv")
 
