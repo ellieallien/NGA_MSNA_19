@@ -2,7 +2,7 @@ type,name,label,name,label::Hausa,hint,hint::Hausa,required,choice_filter,appear
 start,start,,start,,,,,,,,,,,,
 end,end,,end,,,,,,,,,,,,
 deviceid,deviceid,,deviceid,,,,,,,,,,,,
-note,note1,#REACH Nigeria MSNA,note1,,,,false,,,,,,,,
+note,note1,#REACH Nigeria MSNA,note1,,,,FALSE,,,,,,,,
 text,enum,What is the enumerator code/name?,enum,lambar ma'akaci,,,yes,,,,,,,,
 select one gender,enum_female,What is the sex of the enumerator?,enum_female,,"If YES, questions on breastfeeding and MHM will follow, if NO they will be skipped",,yes,,,,,,,,
 select_one state,state,In what State is this survey taking place?,state,awani jahar wannan gida take?,,,yes,,minimal,,,,,,

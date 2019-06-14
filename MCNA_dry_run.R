@@ -1,6 +1,6 @@
 # setup
 
-library(dplyr)
+library(dplyr) # data manipulation 
 library(koboquest) # manage kobo questionnairs
 library(kobostandards) # check inputs for inconsistencies
 library(xlsformfill) # generate fake data for kobo
@@ -13,25 +13,20 @@ source("functions/remove_responses_from_sumstat.R")  # generate analysis plans
 ### source("SOME_NGA_SPECIFIC_FUNCTIONS")
 
 # load questionnaire inputs
-questions <- read.csv("input/hh_questions_NGA_MSNA_19.csv", 
+questions <- read.csv("input/questions.csv", 
                       stringsAsFactors=F, check.names = F)
 
-choices <- read.csv("input/hh_choices_NGA_MSNA_19.csv", 
+choices <- read.csv("input/choices.csv", 
                     stringsAsFactors=F, check.names = F)
 
 
 ### remove choice une ligne en trop 
-choices <- choices[-251,]
+choices <- choices[-252,]
 
 # generate data
-
-
 response <- xlsform_fill(questions,choices,200)
 
-
-
-names(response)<-to_alphanumeric_lowercase(names(response))
-
+names(response) <- to_alphanumeric_lowercase(names(response))
 
 questionnaire <- load_questionnaire(data = response,
                                     questions = questions,
@@ -42,8 +37,26 @@ questionnaire <- load_questionnaire(data = response,
 samplingframe <- load_samplingframe(file = "./input/nga_msna_sampling_frame_strata.csv")
 # samplingframe <- load_samplingframe("./input/Strata_clusters_population.csv")
 
-weighting <- map_to_weighting(sampling.frame = sampling.frame, data = data, data.stratum.column = "")
+weighting <- surveyweights::weighting_fun_from_samplingframe(sampling.frame = samplingframe, 
+                                                             data.stratum.column = "lga", 
+                                                             sampling.frame.population.column = "population", 
+                                                             sampling.frame.stratum.column = "lga_pcode", 
+                                                             data = response)
 
+design <- map_to_design(data = response, cluster_variable_name = "cluster", weighting_function = weighting)
+
+
+analysisplan <- read.csv("./input/analysisplan.csv", stringsAsFactors = F)
+short_ap <- analysisplan %>% filter(names != 0)
+
+
+case <- map_to_case("group_difference", "categorical", "categorical")
+result <- map_to_result(data = response, dependent.var = "mhm_material", independent.var = "state", case = case, cluster.variable.name = "cluster", weighting = weighting, questionnaire = questionnaire)
+
+
+result %>% map_to_labeled(., questionnaire = questionnaire) %>% .$summary.statistic  %>% map_to_file("./summary_stats.csv")
+
+result %>% map_to_visualisation
 
 # add cluster ids
 
