@@ -117,17 +117,18 @@ library(readr)
 #'Calculate proportions with or without "dont know"
 #'@param data dataframe
 #'@param agg_var Name of the geographic aggregation unit(e.g., lga)
-#'@param indicator_index == Column INDEX of the first column to be aggregated
+#'@param var_name name of variable to be aggregated
 #'@param dontknow_action a string, either "exclude" if "dont know" should be excluded OR "included" if "dont know" should included
-#'@param dontknow_format == IN QUOTATIONS: How "dont know" is spelled in the data
+#'@param dontknow_format IN QUOTATIONS: How "dont know" is spelled in the data
 #'@example
 #'@export
 #'
-make_proportions <- function(data,agg_var,indicator_index, dontknow_action = "exlude", dontknow_format){
-  var_name <- colnames(data)[indicator_index]
+make_proportions <- function(data,agg_var,var_name, dontknow_action = "exlude", dontknow_format){
   locationz <- as.vector(unique(data[grep(paste0("^",agg_var,"$"),colnames(data))]))
   #locationz <- sort(locationz, decreasing=TRUE)
   data<- add_column(data, onesz = 1)
+  
+  #dealing with dont know and missing answers
   dontknow_format <- paste0("'",dontknow_format,"'")
   if(dont_denom == "exclude"){
     dont_denom <- FALSE
@@ -142,6 +143,8 @@ make_proportions <- function(data,agg_var,indicator_index, dontknow_action = "ex
     data  <- data %>%
       dplyr ::  filter(!is.na(data[grep(paste0("^",var_name,"$"), colnames(data))]))
   }
+  
+  #aggregate for each value
   agg_var_indicator <- as.formula(paste0(agg_var,"~",var_name))  
   result <- data %>% dcast(agg_var_indicator, fun.aggregate = sum,value.var="onesz", na.rm=TRUE)
   namez <- paste0(names(result)[2:ncol(result)],"_",var_name)

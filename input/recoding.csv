@@ -1,0 +1,6 @@
+target_variable,to_values,conditions
+documentation_comp,1,num_nodocs > 0 
+documentation_comp,1,birth_cert > 0
+documentation_comp,2,num_nodocs > 0 & birth_cert > 0
+secu_incident_comp,2,"security_yn == ""yes"""
+protection_index,1,(documentation_comp + secu_incident_comp) > 2

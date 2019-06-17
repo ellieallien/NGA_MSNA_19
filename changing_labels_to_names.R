@@ -33,11 +33,15 @@ questionnaire$question_get_question_label
 
 
 get_name <- function(dap_questions){
+  
 b <-lapply(dap_questions, function(i){
 index <- (questions$label == i) %>% which
 namez <- questions$name[index]
 if(length(namez) == 0) namez <- 0
 return(namez)}) 
+
+
+
 b <- unlist(b)
 return(b)}
 
