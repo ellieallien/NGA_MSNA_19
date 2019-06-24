@@ -74,14 +74,16 @@ result <- map_to_result(data = response,
                         weighting = weighting, 
                         questionnaire = questionnaire)
 
-
+# Calculate the final results
 final_result <- from_analysisplan_map_to_output(data = response, 
                                                 analysisplan = analysisplan, 
                                                 weighting = weighting, 
                                                 cluster_variable_name = "cluster",
                                                 questionnaire = questionnaire)
 
-final_result %>% map_to_summary_table(., filename= "./master_table.csv", questionnaire = questionnaire)
+
+# Print a massive table with everything (summary stats and p values)
+final_result$results %>% map_to_master_table(., filename= "./master_table.csv", questionnaire = questionnaire)
 
 
 summary.stats <- final_result$results %>% lapply(function(x){map_to_labeled(result = x, questionnaire = questionnaire)}) %>% 
@@ -92,67 +94,6 @@ final_result %>% map_to_template( questionnaire = questionnaire, dir = "./output
 
 result %>% map_to_visualisation
 
-# add cluster ids
-
-# cluster_lookup_table <- read.csv("input/combined_sample_ids.csv", 
-#                          stringsAsFactors=F, check.names=F)
-# 
-# response_filtered_w_clusterids <- response_filtered %>% 
-#   mutate(strata = paste0(lookup_table$district[match(cluster_location_id,cluster_lookup_table$new_ID)],type_hh))
-
-
-# horizontal operations / recoding
-# 
-# r <- data %>%
-#   new_recoding(source=how_much_debt, target=hh_with_debt_value) %>%
-#   recode_to(0.25,where.num.larger.equal = 505000,otherwise.to=0) %>%
-# 
-#   new_recoding(target=hh_unemployed) %>%
-#   recode_to(0 ,where=!(is.na(response_filtered$work) | is.na(response_filtered$actively_seek_work))) %>%
-#   recode_to(0.5,where=(work == "no") & (actively_seek_work == "yes")) %>%
-# 
-#   new_recoding(source=reasons_for_debt, target=hh_unable_basic_needs) %>%
-#   recode_to(0.25, where.selected.any = c("health","food","education","basic_hh_expenditure"), otherwise.to=0) %>%
-# 
-#   end_recoding
-
-# r <- r %>% mutate(score_livelihoods = hh_with_debt_value+hh_unemployed+hh_unable_basic_needs)
-
-# vertical operations / aggregation
-
-# make analysisplan including all questions as dependent variable by HH type, repeated for each governorate:
-analysisplan<-make_analysisplan_all_vars(response,
-                                         questionnaire
-                                         ,independent.variable = "yes_no_host",
-                                         repeat.for.variable = "region",
-                                         hypothesis.type = "group_difference" 
-                                         )
-
-
-response$strata<-paste0(response$district,"__",response$yes_no_idp)
-
-
-strata_weight_fun <- map_to_weighting(sampling.frame = samplingframe,
-                 sampling.frame.population.column = "population",
-                 sampling.frame.stratum.column = "strata",
-                 data.stratum.column = "strata")
-
-response$general_weights <- strata_weight_fun(response)
-
-response$cluster_id <- paste(response$settlement,response$yes_no_idp,sep = "_")
-
-results <- from_analysisplan_map_to_output(response, analysisplan = analysisplan,
-                                          weighting = strata_weight_fun,
-                                          cluster_variable_name = "cluster_id",
-                                          questionnaire)
-
-# result_labeled <- result$results %>% lapply(map_to_labeled,questionnaire)
-
-# # exporting only small part of results for speed during testing:
-# subset_of_results<- rep(FALSE,length(results$results))
-# subset_of_results[500:700]<-TRUE
-# some_results<-hypegrammaR:::results_subset(results,logical = subset_of_results)
-some_results<-results
 # not sure if this function should be "user facing" or have some wrappers (@Bouke thoughts?)
 # essentially it handles all the looping over different column values as hierarchies.
 # then each result is visualised by a function passed here that decides how to render each individual result
@@ -165,9 +106,9 @@ hypegrammaR:::map_to_generic_hierarchical_html(final_result,
                                                questionnaire = questionnaire,
                                                label_varnames = TRUE,
                                                dir = "./output",
-                                               filename = "summary_by_dependent_var_then_by_repeat_var.html"
-                                               )
-browseURL("summary_by_dependent_var_then_by_repeat_var.html")
+                                               filename = "summary_by_dependent_var_then_by_repeat_var.html")
+
+browseURL("output/summary_by_dependent_var_then_by_repeat_var.html")
 
 
 # not sure this is working correctly.. next on agenda (:
