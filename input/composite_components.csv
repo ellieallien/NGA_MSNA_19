@@ -1,0 +1,5 @@
+component_name,weight,condition
+secu_incident_comp,2,"security_yn == ""yes"""
+documentation_comp,1,num_nodocs > 0 | birth_cert > 0
+documentation_comp,2,num_nodocs > 0 & birth_cert > 0
+protect_composite,1,(documentation_comp + secu_incident_comp) >3

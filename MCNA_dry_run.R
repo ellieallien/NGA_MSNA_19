@@ -1,15 +1,20 @@
 # setup
 
-library(dplyr) # data manipulation 
+setwd("/Users/misi/Documents/GitHub/NGA_MSNA_19")
+library(dplyr)
 library(koboquest) # manage kobo questionnairs
+library(parallel) # mclapply
 library(kobostandards) # check inputs for inconsistencies
+#devtools::install_github('mabafaba/kobostandards') 
 library(xlsformfill) # generate fake data for kobo
+#devtools::install_github('mabafaba/xlsformfill') 
 library(hypegrammaR) # stats 4 complex samples
+#devtools::install_github('ellieallien/hypegrammaR') 
 library(composr) # horziontal operations
 library(parallel)
 library(knitr)
 
-source("functions/to_alphanumeric_lowercase.R") # function to standardise column headers (like check.names)
+#source("functions/to_alphanumeric_lowercase.R") # function to standardise column headers (like check.names)
 source("functions/analysisplan_factory.R")  # generate analysis plans
 source("functions/remove_responses_from_sumstat.R")  # generate analysis plans
 ### source("SOME_NGA_SPECIFIC_FUNCTIONS")
@@ -23,14 +28,23 @@ choices <- read.csv("input/choices.csv",
 
 
 
-which(choices$name == "cloth_uniform")
-
 ### remove choice une ligne en trop 
 choices <- choices[-252,]
 
-# generate data
-response <- xlsform_fill(questions,choices,400)
-response$consent <- "consent"
+#generate data
+#response <- xlsform_fill(questions,choices,200)
+
+response <- read_csv("~/Desktop/Nigeria/MSNA/msna_2019/updated_data/UPDATED_CLEANED_DATA2019-06-23_REACH_NGA_2019_MSNA_HHSurvey_Final_21062019_Merged_REACH_NGA_2019_MSNA_HHSurvey.csv")
+
+
+# # generate data
+# response <- xlsform_fill(questions,choices,400)
+# response$consent <- "consent"
+
+to_alphanumeric_lowercase <-
+function(x){tolower(gsub("[^a-zA-Z0-9_]", "\\.", x))}
+names(response)<-to_alphanumeric_lowercase(names(response))
+
 
 names(response) <- to_alphanumeric_lowercase(names(response))
 
@@ -40,17 +54,21 @@ questionnaire <- load_questionnaire(data = response,
 
 
 # generate samplingframe
-samplingframe <- load_samplingframe(file = "./input/nga_msna_sampling_frame_strata.csv")
+sampling.frame <- load_samplingframe(file = "./input/nga_msna_sampling_frame_strata.csv")
 # samplingframe <- load_samplingframe("./input/Strata_clusters_population.csv")
 
-weighting <- map_to_weighting(sampling.frame = samplingframe, 
-                                                             data.stratum.column = "lga", 
-                                                             sampling.frame.population.column = "population", 
-                                                             sampling.frame.stratum.column = "lga_pcode", 
-                                                             data = response)
+
+weighting <- map_to_weighting(sampling.frame = sampling.frame, 
+                              data = response, 
+                              sampling.frame.population.column ="population", 
+                              sampling.frame.stratum.column = "lga_pcode",
+                              data.stratum.column = "lga")
 
 design <- map_to_design(data = response, cluster_variable_name = "cluster", weighting_function = weighting)
 
+
+design <- map_to_design(data =response, cluster_variable_name = "cluster", weighting_function = weighting)
+# add cluster ids
 
 analysisplan <- make_analysisplan_all_vars(df= response, 
                                            questionnaire = questionnaire, 
@@ -74,6 +92,7 @@ result <- map_to_result(data = response,
                         weighting = weighting, 
                         questionnaire = questionnaire)
 
+
 # Calculate the final results
 final_result <- from_analysisplan_map_to_output(data = response, 
                                                 analysisplan = analysisplan, 
@@ -86,6 +105,8 @@ final_result <- from_analysisplan_map_to_output(data = response,
 final_result$results %>% map_to_master_table(., filename= "./master_table.csv", questionnaire = questionnaire)
 
 
+#case <- map_to_case("group_difference", "categorical" , "categorical")
+
 summary.stats <- final_result$results %>% lapply(function(x){map_to_labeled(result = x, questionnaire = questionnaire)}) %>% 
   lapply(function(x){x$summary.statistic}) %>% do.call(rbind, .) %>% map_to_file("./summary_stats.csv")
 
@@ -93,6 +114,11 @@ summary.stats <- final_result$results %>% lapply(function(x){map_to_labeled(resu
 final_result %>% map_to_template( questionnaire = questionnaire, dir = "./output", type = "visual", "report.html")
 
 result %>% map_to_visualisation
+
+
+analysisplan <- analysisplan[1:10]
+
+
 
 # not sure if this function should be "user facing" or have some wrappers (@Bouke thoughts?)
 # essentially it handles all the looping over different column values as hierarchies.
@@ -109,6 +135,9 @@ hypegrammaR:::map_to_generic_hierarchical_html(final_result,
                                                filename = "summary_by_dependent_var_then_by_repeat_var.html")
 
 browseURL("output/summary_by_dependent_var_then_by_repeat_var.html")
+
+map_to_summary_table(results,"summarized_group.csv", questionnaire = questionnaire)
+
 
 
 # not sure this is working correctly.. next on agenda (:
