@@ -1,0 +1,20 @@
+component_name,weight,condition
+people_displacement_comp,0,"rep(T, length(group))"
+people_displacement_comp,1.5,"group == ""idp"""
+people_displacement_comp,3,"group == ""idp"" & access_aoo == ""no"""
+people_restriction_comp,0,"rep(T, length(move_restriction_yn))"
+people_restriction_comp,1.5,"move_restriction_yn %in% c(""restriction_night"" , ""restriction_large_group"" , ""restriction_2km"" , ""restriction_id"" , ""restriction_complete"")"
+services_facilities_comp,0,"rep(T, length(group))"
+services_facilities_comp,1.5,"(access_infra_educ == ""yes"" & access_infra_educ_affected > 0) , (access_infra_health == ""yes"" & access_infra_health_affected > 0) , (access_infra_wash_affected > 0)"
+services_comms_comp,0,!(is.na(aid_access_phone))
+services_comms_comp,1,"aid_access_phone == ""no"" , (aid_access_phone == ""yes"" & aid_access_internet == ""no"")"
+access_assistance_comp,0,"rep(T, length(lga))"
+access_assistance_comp,2,"lga %in% c(""NG008016"" , ""NG008027"" , ""NG036012"")"
+access_route_comp,0,"rep(T, length(lga))"
+access_route_comp,1.5,"lga %in% c(""NG002003"" , ""NG002008"" , ""NG002012"")"
+access_uxo_comp,0,"rep(T, length(lga))"
+access_uxo_comp,1.5,"lga %in% c(""NG002003"" , ""NG002008"" , ""NG002012"" , ""NG002018"" , ""NG002019"" , ""NG002020"" , ""NG002021"" , ""NG008014"" , ""NG008015"" , ""NG008018"" , ""NG008021"" , ""NG008027"" , ""NG036001"" , ""NG036004"" , ""NG036011"" , ""NG036012"" , ""NG036015"" , ""NG036017"")"
+impact_index,1,(people_displacement_comp + people_restriction_comp + services_facilities_comp + services_comms_comp + access_assistance_comp + access_route_comp + access_uxo_comp) < 3
+impact_index,2,(people_displacement_comp + people_restriction_comp + services_facilities_comp + services_comms_comp + access_assistance_comp + access_route_comp + access_uxo_comp) >= 3 & < 6
+impact_index,3,(people_displacement_comp + people_restriction_comp + services_facilities_comp + services_comms_comp + access_assistance_comp + access_route_comp + access_uxo_comp) >= 6 & < 9
+impact_index,4,(people_displacement_comp + people_restriction_comp + services_facilities_comp + services_comms_comp + access_assistance_comp + access_route_comp + access_uxo_comp) >= 9

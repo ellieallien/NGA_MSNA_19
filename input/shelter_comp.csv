@@ -1,0 +1,21 @@
+component_name,weight,condition
+main_income_comp,0,!(is.na(main_income))
+main_income_comp,2,"main_income %in% c(""no_income"" , ""remittance"" , ""begging"")"
+debt_comp,0,!(is.na(hh_debt_yn))
+debt_comp,1,"hh_debt_yn == ""yes"""
+cash_access_comp,0,!(is.na(cash_access))
+cash_access_comp,2,"cash_access == ""no_cash"""
+bank_access_comp,0,!(is.na(bank))
+bank_access_comp,1,"bank == ""no"""
+waste_coverage_comp,0,!(is.na(waste_management))
+waste_coverage_comp,1,"waste_management == ""no"""
+mobile_access_comp,0,!(is.na(aid_access_phone))
+mobile_access_comp,1,"aid_access_phone == ""no"""
+mobile_access_comp,0.5,"aid_access_phone == ""yes"" & aid_access_internet == ""no"""
+security_access_comp,0,!(is.na(access_gov))
+security_access_comp,1,"access_gov %in% c(""police_yes"" , ""gov_yes"")"
+security_access_comp,2,"access_gov == ""both_more_2km"""
+earlyrecovery_index,1,(main_income_comp + debt_comp + cash_access_comp + bank_access_comp + waste_coverage_comp + mobile_access_comp + security_access_comp) < 3
+earlyrecovery_index,2,(main_income_comp + debt_comp + cash_access_comp + bank_access_comp + waste_coverage_comp + mobile_access_comp + security_access_comp) >=3
+earlyrecovery_index,3,(main_income_comp + debt_comp + cash_access_comp + bank_access_comp + waste_coverage_comp + mobile_access_comp + security_access_comp) >= 6
+earlyrecovery_index,4,(main_income_comp + debt_comp + cash_access_comp + bank_access_comp + waste_coverage_comp + mobile_access_comp + security_access_comp) >= 8

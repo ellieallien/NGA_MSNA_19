@@ -1,0 +1,152 @@
+####################################CROSS-SECTORAL COMPOSITE INDICATORS#################################################
+
+##THESE COMPOSITE INDICATORS ARE FEEDING IN VARIOUS PILLARS UNDER THE JOINT INTER-SECTORAL ANALYSIS FRAMEWORK
+- VULNERABILITY INDEX IS FEEDING INTO THE EVENTS/SHOCKS - IT DOES NOT FEED INTO THE MSNI CALCULATION
+- COPING CAPACITY GAP INDEX IS FEEDING INTO THE 2ND PILLAR OF HUMANITARIAN CONDITIONS - DOES FEED INTO MSNI CALCULATION
+- IMPACT INDEX IS FEEDING INTO THE IMPACT - DOES FEED INTO THE MSNI CALCULATION
+- THE FINAL MSNI CALCULATION IS COMPRISED OF IMPACT INDEX, COPING CAPACITY GAP INDEX, AND SECTORAL INDICES AS PER THE 
+METHODOLOGY BELOW##
+
+
+******************************************* vulnerability_index ****************************************************
+
+##Under the vulnerability composite indicator, there are no specific sub-components, all indicators are to be treated equally##
+
+isolated_comp == 0.5 if num_hh == 1
+
+
+female_headed_comp == 2 if gender_hoh == "female"
+
+
+dependency_ratio_comp == 2 if (sum(age_hh[0-14] + age_hh[65-100]) / sum(age_hh[15-64])) >= 0.75
+
+
+child_headed_comp == 2 if vulnerability_hh == "child_hoh"
+
+
+plw_comp == 1 if vulnerability_hh == "pregnant" | "breastfeeding"
+
+
+ill_disabled_comp == 1 if vulnerability_hh == "chronicly_ill" | "mentally_disabled" | "physically_disabled"
+
+
+ch_phase_comp == 0.5 if lga = "NG002010" | "NG002013" | "NG008002" | "NG008003" | "NG008007" | "NG008008" | "NG008009" | "NG008011" | "NG008013" 
+							| "NG008014" | "NG008016" | "NG008019" | "NG008020" | "NG008021" | "NG008023" | "NG008024" | "NG008025" 
+ch_phase_comp == 1 if lga = "NG008015"
+
+
+##FINAL INDEX CALCULATION: For the vulnerability_index we only a simple threshold, to determine if the HH is vulnerable or not, as below##
+
+vulnerability_index == 1 if isolated_comp + female_headed_comp + dependency_ratio_comp + child_headed_comp + plw_comp + ill_disabled_comp + ch_phase_comp >= 4
+
+
+
+
+************************************************coping_gap_index***************************************************
+
+##Under the coping capacity gap composite indicator, there are no specific sub-components, all indicators are to be treated equally##
+
+
+health_coping_comp == 2 if wouldseek_treatment == "wouldnt_seek"
+
+
+water_coping_comp == 2 if coping_water == "reduce_drinking" && "reduce_washing_bathing" | "reduce_drinking" && "fetch_further" | "reduce_drinking" && "spend_money" | "reduce_drinking" && "buy_on_credit" | "reduce_drinking" && "drink_cleaning"
+										| "reduce_washing_bathing" && "fetch_further" | "reduce_washing_bathing" && "spend_money" | "reduce_washing_bathing" && "buy_on_credit" | "reduce_washing_bathing" && "drink_cleaning"
+										| "fetch_further" && "spend_money" | "fetch_further" && "buy_on_credit" | "fetch_further" && "drink_cleaning" 
+										| "spend_money" && "buy_on_credit" | "spend_money" && "drink_cleaning" 
+										| "buy_on_credit" && "drink_cleaning"
+
+
+rcsi_comp == 2 if rcsi_total >= 10
+
+
+livelihood_coping_comp == 2 if f_livelihood_coping_sell_productive_assets == "yes" | "exhausted" && f_livelihood_coping_withdraw == "yes" | "exhausted" OR f_livelihood_coping_sell_productive_assets == "yes" | "exhausted" && f_livelihood_coping_reduceexpense == "yes" | "exhausted" OR f_livelihood_coping_sell_productive_assets == "yes" | "exhausted" && f_livelihood_coping_harvest_immature == "yes" | "exhausted" OR f_livelihood_coping_sell_productive_assets == "yes" | "exhausted" && f_livelihood_coping_consume_seeds == "yes" | "exhausted" OR f_livelihood_coping_sell_productive_assets == "yes" | "exhausted" && f_livelihood_coping_decreaseexpense_animalcare_fertilizer == "yes" | "exhausted"
+							 | f_livelihood_coping_withdraw == "yes" | "exhausted" && f_livelihood_coping_reduceexpense == "yes" | "exhausted" OR f_livelihood_coping_withdraw == "yes" | "exhausted" && f_livelihood_coping_harvest_immature == "yes" | "exhausted" OR f_livelihood_coping_withdraw == "yes" | "exhausted" && f_livelihood_coping_consume_seeds == "yes" | "exhausted" OR f_livelihood_coping_withdraw == "yes" | "exhausted" && f_livelihood_coping_decreaseexpense_animalcare_fertilizer == "yes" | "exhausted"
+							 | f_livelihood_coping_reduceexpense == "yes" | "exhausted" && f_livelihood_coping_harvest_immature == "yes" | "exhausted" OR f_livelihood_coping_reduceexpense == "yes" | "exhausted" && f_livelihood_coping_consume_seeds == "yes" | "exhausted" OR f_livelihood_coping_reduceexpense == "yes" | "exhausted" && f_livelihood_coping_decreaseexpense_animalcare_fertilizer == "yes" | "exhausted"
+							 | f_livelihood_coping_harvest_immature == "yes" | "exhausted" && f_livelihood_coping_consume_seeds == "yes" | "exhausted" OR f_livelihood_coping_harvest_immature == "yes" | "exhausted" && f_livelihood_coping_decreaseexpense_animalcare_fertilizer == "yes" | "exhausted" 
+							 | f_livelihood_coping_consume_seeds == "yes" | "exhausted" && f_livelihood_coping_decreaseexpense_animalcare_fertilizer == "yes" | "exhausted"
+livelihood_coping_comp == 3 if f_livelihood_coping_sell_land_property == "yes" | "exhausted" | f_livelihood_coping_beg == "yes" | "exhausted" | f_livelihood_coping_dangerous == "yes" | "exhausted" | f_livelihood_coping_sell_female = "yes" | "exhausted" | f_livelihood_coping_child_marriage == "yes" | "exhausted"
+
+
+fuel_coping_comp == 2 if safe_coping_main == "reduce_number_meals" && "sell_food_rations" | "reduce_number_meals" && "undercook" | "reduce_number_meals" && "raw_food" | "reduce_number_meals" && "less_preferred_fuel" | "reduce_number_meals" && "communal_cooking"
+										   | "sell_food_rations" && "undercook" | "sell_food_rations" && "raw_food" | "sell_food_rations" && "less_preferred_fuel" | "sell_food_rations" && "communal_cooking"
+										   | "undercook" && "raw_food" | "undercook" && "less_preferred_fuel" | "undercook" && communal_cooking" 
+										   | "raw_food" && "less_preferred_fuel" | "raw_food" && communal_cooking" 
+										   | "less_preferred_fuel" && "communal_cooking"
+
+
+nfi_comp == 0.5 if $(needs_items) >= 6 && <10
+nfi_comp == 1 if $(needs_items) >= 10 
+
+##FINAL INDEX CALCULATION: For this cross-sectoral indicator we have 4 category represented by a scale from 1 to 4, where
+1 is No/Minimal
+2 is Stress
+3 is Severe
+4 is Extreme##
+
+
+coping_gap_index == 1 if health_coping_comp + water_coping_comp + rcsi_comp + livelihood_coping_comp + fuel_coping_comp + nfi_comp < 3
+coping_gap_index == 2 if health_coping_comp + water_coping_comp + rcsi_comp + livelihood_coping_comp + fuel_coping_comp + nfi_comp >= 3 && < 6
+coping_gap_index == 3 if health_coping_comp + water_coping_comp + rcsi_comp + livelihood_coping_comp + fuel_coping_comp + nfi_comp >= 6 && < 9
+coping_gap_index == 4 if health_coping_comp + water_coping_comp + rcsi_comp + livelihood_coping_comp + fuel_coping_comp + nfi_comp > 9
+
+
+
+
+************************************************impact_index***************************************************
+
+##Under the impact indicator, we have TWO sub-components: CONFLICT / FLOODING - for each, indicators will apply with different scoring.## 
+##This composite indicator is using data from both HOUSEHOLD & KEY INFORMANT datasets##
+
+
+people_displacement_comp == 1.5 if group == "idp" 
+people_displacement_comp == 3 if group == "idp" && access_aoo == "no"
+
+
+people_restriction_comp == 1.5 if move_restriction_yn == "restriction_night" | "restriction_large_group" | "restriction_2km" | "restriction_id" | "restriction_complete"
+
+
+##This following indicator is using key informant data##
+services_facilities_comp == 1.5 if access_infra_educ == "yes" && access_infra_educ_affected > 0 | access_infra_health == "yes" && access_infra_health_affected > 0 | access_infra_wash_affected > 0
+
+
+services_comms_comp == 1 if aid_access_phone == "no" | aid_access_phone == "yes" && aid_access_internet == "no"
+
+
+access_assistance_comp == 2 if aid_receive == "no" | aid_receive == "yes" && aid_safe == "no" 
+
+
+##This following indicator is using key informant data##
+access_route_comp == 1.5 if lga == "NG002003" | "NG002008" | "NG002012"
+
+
+##This following indicator is using key informant data##
+access_uxo_comp == 1.5 if lga =! "NG002003" | "NG002008" | "NG002012"
+
+
+##FINAL INDEX CALCULATION: For this cross-sectoral indicator we have 4 category represented by a scale from 1 to 4, where
+1 is No/Minimal
+2 is Stress
+3 is Severe
+4 is Extreme##
+
+
+impact_index == 1 if people_displacement_comp + people_restriction_comp + services_facilities_comp + services_comms_comp + access_assistance_comp + access_route_comp + access_uxo_comp < 3
+impact_index == 2 if people_displacement_comp + people_restriction_comp + services_facilities_comp + services_comms_comp + access_assistance_comp + access_route_comp + access_uxo_comp >= 3 && < 6
+impact_index == 3 if people_displacement_comp + people_restriction_comp + services_facilities_comp + services_comms_comp + access_assistance_comp + access_route_comp + access_uxo_comp >= 6 && < 9
+impact_index == 4 if people_displacement_comp + people_restriction_comp + services_facilities_comp + services_comms_comp + access_assistance_comp + access_route_comp + access_uxo_comp > 9
+
+
+
+
+
+**************************************************msni_final*****************************************************
+
+
+msni_final( 
+				step1 <- MAX(health_index, protection_index, shelter_index)
+				step2 <- REPLACE by impact_index if impact_index < step1, ELSE step2 == step1
+				step3 <- if (health_index && protection_index | health_index && shelter_index | protection_index && shelter_index) > impact_index, REPLACE step2 by (health_index && protection_index | health_index && shelter_index | protection_index && shelter_index), ELSE, step3 == step2
+				step4 <- if (foodsec_index | wash_index) > step3, REPLACE by MAX(foodsec_index | wash_index), ELSE step4 == step3
+				step5 <- if step4 == 1 && (health_index | protection_index | shelter_index | education_index | earlyrecovery_index) >= 3, step5 == 2, ELSE, step5 == step4
+				)

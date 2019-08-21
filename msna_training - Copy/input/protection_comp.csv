@@ -1,0 +1,22 @@
+component_name,weight,condition
+secu_incident _comp,1,"sm_selected(security_type, any=c(""physical_violence"" , ""fire"" ,""destruction_property"")"
+secu_incident _comp,2,"sm_selected(security_type, any=c(""abduction_adult"" , ""abduction_children"" , ""armed_attack"")"
+secu_incident _comp,3,"sm_selected(security_type, any=c(""killing"" ,""explosives"" ,""gbv"")"
+documentation_comp,0.5,num_nodocs > 0
+documentation_comp,1,birth_cert > 0
+documentation_comp,1.5,num_nodocs & birth_cert > 0
+eviction_comp,0.5,"eviction_threat == ""yes"""
+restriction_comp,1,"move_restriction_yn, where.selected.none =  c(""restriction_night"" , ""restriction_large_group"" , ""restriction_2km"" ,""restriction_id"")"
+restriction_comp,2,"move_restriction_yn == ""restriction_complete"""
+exploitation_comp,1,"!(labour_exploitation %in% c(""none"" , ""98"" , ""99""))"
+missing_comp,1,missing_detained_adult > 0
+missing_comp,2,missing_detained_child > 0
+missing_comp,3,missing_detained_adult > 0 & missing_detained_child > 0
+psycho_distress_comp,1,"mhpss_needs %>% strsplit("" "") %>% lapply(function(x){(x %in% c(""reduced_interest"", ""feeling_depressed"", ""feeling_tired"", ""trouble_sleeping"", ""nervousness"", ""afraid"",""angry"") %>% sum) > 1}) %>% unlist
+'mhpss_needs %>% strsplit("" "") %>% lapply(function(x){(x %in% c(""reduced_interest"", ""feeling_depressed"", ""feeling_tired"", ""trouble_sleeping"", ""nervousness"", ""afraid"",""angry"") %>% sum) > 1}) %>% unlist'
+'mhpss_needs %>% strsplit("" "") %>% lapply(function(x){(x %in% c(""reduced_interest"", ""feeling_depressed"", ""feeling_tired"", ""trouble_sleeping"", ""nervousness"", ""afraid"",""angry"") %>% sum) > 1}) %>% unlist'
+"
+protection_index,1,(secu_incident_comp + documentation_comp + eviction_comp + restriction_comp + exploitation_comp + missing_comp + psycho_distress_comp) < 3
+protection_index,2,(secu_incident_comp + documentation_comp + eviction_comp + restriction_comp + exploitation_comp + missing_comp + psycho_distress_comp) >= 3 & < 6
+protection_index,3,(secu_incident_comp + documentation_comp + eviction_comp + restriction_comp + exploitation_comp + missing_comp + psycho_distress_comp) >= 6 & < 9
+protection_index,4,(secu_incident_comp + documentation_comp + eviction_comp + restriction_comp + exploitation_comp + missing_comp + psycho_distress_comp) >= 9

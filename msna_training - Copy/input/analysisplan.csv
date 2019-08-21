@@ -1,0 +1,1528 @@
+,JIAF.Pillar,Research.questions,IN..,Data.collection.method,Indicator.group...sector,Indicator...Variable,names,Questionnaire.Question,Instructions,Questionnaire.Responses,Data.collection.level,Sampling,Maps.planned.,X,X.1,X.2,X.3,X.4,X.5,X.6,X.7,X.8,X.9,X.10,X.11,X.12,X.13,X.14,X.15,X.16,X.17,X.18,X.19,X.20,X.21,X.22,X.23,X.24
+1,,N/A,A.0.1,KI Interview,Metadata,Metadata,enum,What is the enumerator code/name?,Text,Text,Community,Purposive,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+2,,,A.0.2,KI Interview,Metadata,Metadata,state,In what State is this survey taking place?,Select one,Dropdown list,Community,Purposive,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+3,,,A.0.3,KI Interview,Metadata,Metadata,lga,In what LGA is this survey taking place?,Select one,Dropdown list,Community,Purposive,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+4,,,A.0.4,KI Interview,Metadata,Metadata,ward,In what ward is this survey taking place?,Select one,Dropdown list,Community,Purposive,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+5,,,A.0.5,KI Interview,Metadata,Metadata,0,What is the cluster ID of this survey?,Select one,Dropdown list,Community,Purposive,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6,,,A.0.6,KI Interview,Metadata,Metadata,0,Take the GPS coordinates of this location (please wait to have a precision of less than 10 meters,GPS,GPS,Community,Purposive,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+7,,,A.0.7,KI Interview,Metadata,Metadata,0,Is the settlement where it was expected?,Select one,"1. Settlement was where expected, GPS accurate
+2. Settlement was far from where expected (>0.5 km), GPS not accurate
+3. Settlement was absent, or abandoned
+98. No response
+99. Don't know",Community,Purposive,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+8,,,A.0.8,KI Interview,Metadata,Metadata,0,How were you able to access this settlement?,Select one,"1. Not accessible
+2. By motorcycle / keke
+3. By car / minivan
+97. Other",Community,Purposive,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+9,,,A.0.9,KI Interview,Metadata,Metadata,0,"We are from REACH / NRC / PLAN / CRS / Malteser International, and we are conducting this assessment to understand the needs of people in the affected communities in the North-East of Nigeria. We share our results with humanitarian organizations so they can better plan and organize their responses. Today, we are visiting your community to do an assessment and to ask you a few questions about the populations residing it, environmental issues and access to services and key infrastructure. You will not receive anything for participating, and if you choose not to participate it will not affect your ability to receive humanitarian services. The interview will take about 15 minutes. Do you agree to participate?
+
+[If Key informant is here and willing to participate, select YES. If Key informant is not here or is not willing to participate, select NO. Look for another key informant in the community.]",Select one,"1. Yes
+2. No",Community,Purposive,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+10,,,A.1.1,KI Interview,KI Information,KI Information,0,What is the name of the key informant?,Select one,Text,Community,Purposive,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+11,,,A.1.2,KI Interview,KI Information,KI Information,0,"Are you the bulama, camp leader or community leader?",Select one,"1. Bulama
+2. Camp leader
+3. Community leader
+97. Other",Community,Purposive,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+12,,,A.1.3,KI Interview,KI Information,KI Information,0,What is the phone number of the key informant?,Text,Text,Community,Purposive,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+13,,,A.1.4,KI Interview,KI Information,KI Information,0,What is the name of this settlement?,Text,Text,Community,Purposive,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+14,,,A.2.1,KI Interview,Demographics,Demographics,0,"What is the TOTAL number of households living in {settlement}, including IDPs, non-displaced, and returnees?",Integer,integer,Community,Purposive,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+15,,,A.2.2.,KI Interview,Demographics,Demographics,0,What is the total number of IDP households?,Integer,integer,Community,Purposive,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+16,,,A.2.2,KI Interview,Demographics,Demographics,0,What is the total number of non-displaced households?,Integer,integer,Community,Purposive,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+17,,,A.2.2.,KI Interview,Demographics,Demographics,0,What is the total number of returnee households?,Integer,integer,Community,Purposive,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+18,Living conditions,What are the environmental and security challenges experienced in the accessible communities?,A.3.1,KI Interview,Environment & Security,"% of communities exposed to explosive hazards, and exposure profile",0,Have you observed/are aware of any people in your community who have been injured or killed by explosive items in the last 3 months?,Select one,"1. Yes
+2. No
+98. No response
+99. Don’t know",Community,Purposive,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+19,,,A.3.2,KI Interview,Environment & Security,"% of communities exposed to explosive hazards, and exposure profile",0,What group of people were exposed to the explosive items?,Select multiple,"1. Men
+2. Women
+3. Adolescent boys (age 12-17 years)
+4. Adolescent girls (age 12-17 years)
+5. Boys (age <12 years)
+6. Girls (age <12 years)
+97. Other
+98. No response
+99. Don't know",Community,Purposive,Yes,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+20,,,A.3.3,KI Interview,Environment & Security,"% of communities exposed to explosive hazards, and exposure profile",0,"If yes, do you know what these persons were doing at the time of the accident?",Select multiple,"1. Moving / traveling from one place to another / going to work
+2. When working on the farms
+3. When collecting firewood
+4. Collecting scrap metal
+5. Children while playing
+6. Going to school, or at school
+7. Attempt by community member to remove explosive device
+97. Other
+98. No response
+99. Don't know",Community,Purposive,No,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+21,,,A.3.4,KI Interview,Environment & Security,"% of communities exposed to explosive hazards, and exposure profile",0,"If yes, what is the type of land mainly contaminated by explosive items?",Select multiple,"1. Agricultural land
+2. Hospital
+3. School
+4. Residential areas / homes
+5. Other public space/area
+6. Other public buildings
+98. No response
+99. Don't know",Community,Purposive,Yes,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+22,,,A.4.1,KI Interview,Environment & Security,% of communities affected by environment damage,0,"During the last rainy season, did flooding occur in this location which resulted in the loss of shelter or forced displacement of people?",Select one,"1. Yes, multiple times
+2. Yes, only once
+3. No
+98. No response
+99. Don't know",Community,Purposive,Yes,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+23,Pre-existing vulnerabilities / Needs projection,,A.4.2,KI Interview,Environment & Security,% of communities affected by environment damage,0,"How many households shelters were abandoned by the flooding, the last time it flooded?",Select one,"1. Few households affected(less than 1/3 of households)
+2. Some households affected (greater than 1/3 but less than 2/3 of households)
+3. Most households (greater than 2/3 but not all households)
+4. All households affected",Community,Purposive,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+24,,,A.4.3,KI Interview,Environment & Security,% of communities affected by environment damage,0,"How severe was the flooding, the last time it flooded?",Select one,"1. Lasted one day only
+2. Lasted 2-3 days
+3. Lasted between 4 days and a week
+4. Lasted greater than a week, but less than a month
+5. Lasted greater than a month
+98. No response
+99. Don't know",Community,Purposive,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+25,,,A.4.4,KI Interview,Environment & Security,% of communities affected by environment damage,0,"During the past 3 months, did fire occur in this location which resulted in the loss of shelter or forced displacement of people?",Select one,"1. Yes, multiple times
+2. Yes, only once
+3. No
+98. No response
+99. Don't know",Community,Purposive,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+26,,,A.4.5,KI Interview,Environment & Security,% of communities affected by environment damage,0,"How many households shelters were abandoned/lost due to the fire, last time it occured?",Select one,"1. Few households affected(less than 1/3 of households)
+2. Some households affected (greater than 1/3 but less than 2/3 of households)
+3. Most households (greater than 2/3 but not all households)
+4. All households affected",Community,Purposive,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+27,Living conditions,What are the issues related to children protection and mental health in the accessible communities?,A.5.1,KI Interview,Environment & Security,% of children separated from their parents / caregivers,0,Are there any children in the community who are separated from their parents/caregivers ?,Select one,"1. Yes
+2. No
+98. No response
+99. Don’t know",Community,Purposive,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+28,,,A.5.2,KI Interview,Environment & Security,% of children separated from their parents / caregivers,0,What is the main living arrangement for UNACCOMPANIED children in the community?,Select one,"1. Living alone or with a group of children
+2. Living in an orphanage or a collective centre
+3. Living with adult caregivers
+97. Other
+98. No response
+99. Don't know",Community,Purposive,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+29,,,A.5.3,KI Interview,Environment & Security,% of HHs with children experiencing psychosocial distress,0,Have you noticed any changes in the behaviour of children in the community?,Select one,"1. Yes
+2. No
+98. No response
+99. Don’t know",Community,Purposive,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+30,,,A.5.4,KI Interview,Environment & Security,% of HHs with children experiencing psychosocial distress,0,"If yes, which of the following behaviours have you observed amongst children in the community? ",Select multiple,"1. Unwillingness to go to school
+2. Difficulties with sleep
+3. Isolation
+4. Less willingness to help parents/caregivers
+5. Sadness
+6. Violence against other children
+7. Violent behaviour in general in the community
+8. Eagerness to join armed/vigilante group
+9. Substance abuse
+10. Committing crime
+11. Engaging in high risk sexual behaviour
+97 Other
+98. No response
+99. Don't know",Community,Purposive,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+31,,,A.5.5,KI Interview,Environment & Security,% of HHs with children experiencing psychosocial distress,0,"If yes, do you think the behaviour changes identified are more prevalent amongst girls or amongst boys? ",Select one,"1. More frequent among boys
+2. More frequent among girls
+98. No response
+99. Don't know",Community,Purposive,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+32,,What are the challenges related to accessing services and infrastructure in the accessible communities?,A.6.1,KI Interview,Access to services & infrastructure,% of HHs with access to functional basic public facilities and infrastructure ,0,Are there formal educational facilities in this community?,Select one,"1. Yes
+2. No
+98. No response
+99. Don’t know",Community,Purposive,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+33,,,A.6.2,KI Interview,Access to services & infrastructure,% of HHs with access to functional basic public facilities and infrastructure ,0,"How many education facilities (nursery, primary, and /or secondary) have been affected by the conflict?",Select one,"1. Few facilities affected(less than 1/3 of facilities)
+2. Some facilities affected (greater than 1/3 but less than 2/3 of facilities)
+3. Most facilities (greater than 2/3 but not all facilities)
+4. All facilities affected
+98. No response
+99. Don't know",Community,Purposive,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+34,,,A.6.3,KI Interview,Access to services & infrastructure,% of HHs with access to functional basic public facilities and infrastructure ,0,How many school facilties have a renewable energy source (e.g. solar energy)? ,Select one,"1. None of the facilities
+2. Some of the facilities only
+3. All the facilities
+98. No response
+99. Don't know",Community,Purposive,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+35,,,A.6.4,KI Interview,Access to services & infrastructure,% of HHs with access to functional basic public facilities and infrastructure ,0,Are there health facilities in this community?,Select one,"1. Yes
+2. No
+98. No response
+99. Don’t know",Community,Purposive,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+36,,,A.6.5,KI Interview,Access to services & infrastructure,% of HHs with access to functional basic public facilities and infrastructure ,0,How many health facilities have been affected by the conflict?,Select one,"1. Few facilities affected(less than 1/3 of facilities)
+2. Some facilities affected (greater than 1/3 but less than 2/3 of facilities)
+3. Most facilities (greater than 2/3 but not all facilities)
+4. All facilities affected
+98. No response
+99. Don't know",Community,Purposive,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+37,,,A.6.6,KI Interview,Access to services & infrastructure,% of HHs with access to functional basic public facilities and infrastructure ,0,How many health facilities have a renewable energy source? (e.g. solar energy).,Select one,"1. None of the facilities
+2. Some of the facilities only
+3. All the facilities
+98. No response
+99. Don't know",Community,Purposive,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+38,,,A.6.7,KI Interview,Access to services & infrastructure,% of HHs with access to functional basic public facilities and infrastructure ,0,How many functional community boreholes do you have in you community? ,Integer,Integer,Community,Purposive,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+39,,,A.6.8,KI Interview,Access to services & infrastructure,% of HHs with access to functional basic public facilities and infrastructure ,0,How many community boreholes have a renewable energy source? (e.g. solar energy).,Select one,"1. None of the facilities
+2. Some of the facilities only
+3. All the facilities
+98. No response
+99. Don't know",Community,Purposive,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+40,,,A.6.9,KI Interview,Access to services & infrastructure,% of HHs with access to functional basic public facilities and infrastructure ,0,How many official waste disposal sites are operating now in the community?,Integer,Integer,Community,Purposive,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+41,,,A.6.10,KI Interview,Access to services & infrastructure,% of HHs with access to functional basic public facilities and infrastructure ,0,Are there vehicular access routes open to this area/community for goods and services?,Select one,"1. Yes
+2. No
+98. No response
+99. Don’t know",Community,Purposive,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+42,,,A.6.11,KI Interview,Access to services & infrastructure,% of HHs with access to functional basic public facilities and infrastructure ,0,Has humanitarian assistance been able to access this area/community in the past 3 months?,Select one,"1. Yes
+2. No
+98. No response
+99. Don’t know",Community,Purposive,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+43,,,A.6.12,KI Interview,Access to services & infrastructure,% of HHs with access to functional basic public facilities and infrastructure ,0,"Are there formal justice institutions (courthouse, mobile court system) available in this area / community?",Select one,"1. Yes
+2. No
+98. No response
+99. Don’t know",Community,Purposive,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+44,,,A.6.13,KI Interview,Access to services & infrastructure,% of HHs with access to functional basic public facilities and infrastructure ,0,Are there traditional dispute mechanisms available in this area / community?,Select one,"1. Yes
+2. No
+98. No response
+99. Don’t know",Community,Purposive,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+45,,N/A,,HH survey,Metadata,Enumerator Name,enum,What is the enumerator code/name?,Text,Text,HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+46,,,,HH survey,Metadata,Enumerator Name,enum_female,What is the sex of the enumerator?,Select one,"1. Yes
+2. No",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+47,,,,HH survey,Metadata,Survey Location,state,In what State is this survey taking place?,Select one,Dropdown list,HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+48,,,,HH survey,Metadata,Survey Location,lga,In what LGA is this survey taking place?,Select one,Dropdown list,HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+49,,,,HH survey,Metadata,Survey Location,ward,In what ward is this survey taking place?,Select one,Dropdown list,HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+50,,,,HH survey,Metadata,Survey Location,village,In what settlement is this survey taking place?,Select one,Dropdown list,HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+51,,,,HH survey,Metadata,Survey Location,cluster,What is the cluster ID for this location?,Select one,Dropdown list,HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+52,,,,HH survey,Metadata,Survey Location,gps,Take the GPS coordinates of this location (please wait to have a precision of less than 5 meters),GPS,GPS,HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+53,,,,HH survey,Metadata,Target group,group,What is the intended group for this interview?,Select one,"1. Internally displaced person (IDP)
+2 .Non-displaced
+3. Returnee",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+54,,,,HH survey,Metadata,Target group,status_group,Which statement best describes your household's situation since 2009?,Select one,"1. Household displaced since January 2009 and currently is not living in their village/area of origin
+2. Household has never been displaced from their village/area of origin since January 2009
+3. Household displaced since January 2009 but has since returned and currently is in their village/area of origin",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+55,,,,HH survey,Metadata,Consent,consent,"We are from REACH / PLAN / CRS / Malteser International, and we are conducting this assessment to understand the needs of people in the affected communities in the North-East of Nigeria. We share our results with humanitarian organizations so they can better plan and organize their responses. Today, we randomly selected your household to do an assessment. You will not receive anything for participating, and if you choose not to participate it will not affect your ability to receive humanitarian services. The interview will take about 45 minutes. Do you agree to participate?",Select one,"1. Yes
+2. No",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+56,,,,HH survey,Demographics,HoH Information,hoh,Are you the head of household?,Select one,"1. Yes
+2. No",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+57,,,,HH survey,Demographics,HoH Information,needs_answer,"We want to know about the needs, vulnerabilities and the situation of your household, can you answer for the household?",Select one,"1. Yes
+2. No",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+58,,,,HH survey,Demographics,HoH Information,age_resp,What is your age?,Integer,Integer,HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+59,,,,HH survey,Demographics,HoH Information,gender_resp,What is the gender of the respondent?,Select one,"1. Male 
+2. Female",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+60,,,,HH survey,Demographics,HoH Information,gender_hoh,What is the gender of the Head of Household?,Select one,"1. Male 
+2. Female",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+61,,,,HH survey,Demographics,HoH Information,age_hoh,How old is the Head of Household?,Integer,Integer,HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+62,,What are the characteristics and vulnerabilities of the households?,,HH survey,Demographics,HH member information,marital_hoh,What is the marital status of the Head of Household?,Select one,"1. Single
+2. Married
+3. Divorced
+4. Widowed
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+63,,,,HH survey,Demographics,HH member information,num_hh,Currently how many household members are living in your household (including the respondent)?,Integer,Integer,HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+64,,,,HH survey,Demographics,HH member information,0,Please enter the name of the household member,,,Ind,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+65,,,,HH survey,Demographics,HH member information,sex_hh,What is the gender of ${name_hh}?,Select one,"1. Male 
+2. Female",Ind,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+66,,,,HH survey,Demographics,HH member information,age_hh,What is the age in years of ${name_hh},Integer,Integer,Ind,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+67,,,,HH survey,Demographics,HH member information,age_hh_months,What is the age of ${name_hh} in months?,Integer,Integer,Ind,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+68,,,,HH survey,Vulnerability,% of HHs including members suffering from vulnerability,vulnerability_hh,Does ${name_hh} fit any of the following criteria or situations?,Select multiple,"1. None
+2. Pregnant woman
+3. Breastfeeding woman
+4. Child seperated from parents or usual guardian
+5. Child seperated from family, both immediate and extended
+6. Person with chronic illness 
+7. Person with mental disability
+8. Person with physical disability
+9. Child head of household
+97. Other (Specify)",Ind,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+69,,"What are the causes and triggers of household displacement, and movement intentions?",,HH survey,Displacement,% of IDP HHs by Area of Origin (AoO),aoo_state,What was your pre-displacement location?,Select one,Admin list,HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+70,,,,HH survey,Displacement,% of IDP HHs by Area of Origin (AoO),aoo_lga,What was your pre-displacement LGA? ,Select one,Admin list,HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+71,,,,HH survey,Displacement,% of IDP HHs by Area of Origin (AoO),aoo_ward,What was your pre-displacement ward? ,Select one,Admin list,HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+72,,,,HH survey,Displacement,% of IDP HHs by Area of Origin (AoO),aoo_settlement,What is the name of your settlement/village of pre-displacement?,Text,Text,HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+73,,,,HH survey,Displacement,% of IDP HHs accessing their Area of Origin (AoO),access_yn,"Since you have left your pre-displacement area, when was the last time someone from your household traveled there?",Select one,"1. Not since left 
+2. Within the last two weeks
+3. Greater than 2 weeks but less than 1 month
+4. Greater than 1 month, but less than 3 months
+5. Greater than 3 months ago
+98. No response
+99. Don't know ",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+74,,,,HH survey,Displacement,% of IDP HHs accessing their Area of Origin (AoO),access_aoo,Are you or others from your community CURRENTLY able to move between your pre-displacement area and your current location?,Select one,"1. Yes
+2. No
+98. No response
+99. Don't know",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+75,,,,HH survey,Displacement,% of IDP HHs accessing their Area of Origin (AoO),access_aoo_why,"If yes, why do people from your community return?",Select multiple,"1. Check on family members
+2. Check on home / personal items / valuables
+3. To gather resources (firewood, water, grass)
+4. For farming or grazing livestock
+5. For trading
+6. Check on the security situation
+97. Other
+98. No response
+99. Don't know",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+76,,,,HH survey,Displacement,% of IDP HHs accessing their Area of Origin (AoO),access_aoo_barrier,"If no, what is preventing people from your community from returning?",Select one,"1. Don't feel safe, threat of AOG attack
+2. AOGs / Boko Haram won't allow to return
+3. Military won't allow to return
+4. No source of livelihoods there
+5. No source of food
+6. Community leader advised not to return
+7. Lack of basic services
+8. Lack of shelter
+9. No money to return
+10. No family remaining there
+11. Nobody remained there
+97. Other
+98. No response
+99. Don't know ",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+77,,,,HH survey,Displacement,% of IDP HHs by movement intentions,move_plans,Is your household actively making plans to leave your current location?,Select one,"1. Yes
+2. No
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+78,,,,HH survey,Displacement,% of IDP HHs by movement intentions,move_plans_when,When are you planning on doing this?,Select one,"1. Within the next month
+2. Between 1 and 3 months
+3. Between 4 and 6 months
+4. In more than 6 months",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+79,,,,HH survey,Displacement,% of IDP HHs by movement intentions,move_plans_where,What would be your preferred – FIRST CHOICE – future location?,Select one,"1. Village of origin
+2. LGA capital or other village in LGA of origin
+3. Elsewhere in Nigeria
+4. Elsewhere in another country
+98. No response
+99. Don't know",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+80,,,,HH survey,Displacement,"% of IDP HHs by movement intentions, by push/pull/remain factor",push_firstreason,What are your top three reasons for wanting to move to another location?,Select multiple,"1. Lack of security
+2. Lack of health services
+3. Lack of education services
+4. Lack of food
+5. Lack of water and sanitation
+6. Lack of shelter
+7. Lack of access to land
+8. Lack of access to employment/cash
+9. Lack of family members / social network
+9. Discrimination/Stigmatization
+10. The government / military recommended to leave
+11. NGOs / UN recommended to leave
+12. I am forced to leave by government/military
+13. Lack of means to live here
+97. Other
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+81,,,,HH survey,Displacement,"% of IDP HHs by movement intentions, by push/pull/remain factor",pull_firstreason,What are your top three reasons for choosing your future destination?,Select multiple,"1. Security
+2. Presence of Health services
+3. Presence of Education services
+4. Access to Food
+5. Access to Water and sanitation
+6. Access to shelter
+7. Access to land
+8. Access to employment/cash
+9. To join my family
+10. Join a new social network
+12. The government / military recommended to leave
+13. NGOs / UN recommended to leave
+14. Was forced to leave by governemnt / military against my will
+15. Lack of the means to go anywhere else  
+16. Came here temporaroly while preparing to go somewhere else
+17. No other place to go
+18. My fatherland
+97. Other
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+82,,,,HH survey,Displacement,"% of IDP HHs by movement intentions, by push/pull/remain factor",stay_firstreason,What are your top three reasons for wanting to stay at current location?,Select multiple,"1. Security
+2. Presence of Health services
+3. Presence of Education services
+4. Access to Food
+5. Access to Water and sanitation
+6. Access to shelter
+7. Access to land
+8. Access to employment/cash
+9. To stay with my family
+10. The government / military recommended to stay
+11. NGOs / UN recommended to stay
+12. Was forced to stay by governemnt / military against my will
+13. Lack of the means to go anywhere else  
+14. No other place to go
+15. My fatherland
+97. Other
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+83,,What are the nutrition challenges experienced by small children and mothers?,,HH survey,MUAC,% of children aged 6-59 months presenting as SAM or MAM,present,Is ${name_hh} present?,Select one,"1. Yes
+2. No",Ind,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+84,,,,HH survey,MUAC,% of children aged 6-59 months presenting as SAM or MAM,muac,Please record the MUAC for ${name_hh} to the nearest 1mm,Integer,Integer,Ind,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+85,,,,HH survey,Nutrition programme,% of children with severe acute malnutrition who are currently enrolled in OTP services,otp,Is ${name_hh} currently enrolled in a nutrition treatment program?,Select one,"1. Yes
+2. No
+98. NR
+99. DK",Ind,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+86,,,,HH survey,Nutrition programme,% of children with severe acute malnutrition who are currently enrolled in OTP services,otp_distance,How far is the nearest facility offering OTP services?,Select one,"1. < 30 mins walk
+2. Between 30 mins -  1 hour walk
+3. Between 1-3 hours walk
+4. > 3 hours walk",Ind,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+87,,,,HH survey,Nutrition programme,% of children with severe acute malnutrition who are currently enrolled in OTP services,rutf_shared,Are the RUTF sachets being shared with other household members?,Select one,"1. Yes
+2. No
+98. NR
+99. DK",Ind,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+88,,,,HH survey,Nutrition programme,% of children with severe acute malnutrition who are currently enrolled in OTP services,rutf_shared_why,"If yes, why RUTF shared?",Select one,"1. Not enough food
+2. Not all children are receiving supplies
+3. Adults like the food
+4. The child was improving
+97. Other
+98. NR
+99. DK",Ind,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+89,,,,HH survey,Nutrition programme,% of children with severe acute malnutrition who are currently enrolled in OTP services,rutf_sold,Are the full RUTF sachets being sold?,Select one,"1. Yes
+2. No
+98. NR
+99. DK",Ind,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+90,,,,HH survey,Nutrition programme,% of children with severe acute malnutrition who are currently enrolled in OTP services,rutf_sold_why,"If yes, why RUTF sold?",Select one,"1. Not enough food
+2. RUTF not making a difference 
+3. RUTF making the child more sick
+4. The child was improving
+97. Other
+98. NR
+99. DK",Ind,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+91,,,,HH survey,Nutrition programme,% of children who are currently targeted through BSFP distribution,bsfp,Is this child currently benefitting from a Blanket Supplementary Feeding Programme (BSFP)?,Select one,"1. Yes
+2. No
+98. NR
+99. DK",Ind,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+92,,,,HH survey,Nutrition programme,% of children who are currently targeted through BSFP distribution,bsfp_distance,How far is the nearest point of distribution for the BSFP?,Select one,"1. < 30 mins walk
+2. Between 30 mins -  1 hour walk
+3. Between 1-3 hours walk
+4. > 3 hours walk",Ind,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+93,,,,HH survey,Nutrition programme,% of children who are currently targeted through BSFP distribution,csb_shared,Are the CSB supplies being shared with other household members?,Select one,"1. Yes
+2. No
+98. NR
+99. DK",Ind,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+94,,,,HH survey,Nutrition programme,% of children who are currently targeted through BSFP distribution,csb_shared_why,"If yes, why CSB shared?",Select one,"1. Not enough food
+2. Not all children are receiving supplies
+3. Adults prefer the food
+4. The child was improving
+97. Other
+98. NR
+99. DK",Ind,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+95,,,,HH survey,Nutrition programme,% of children who are currently targeted through BSFP distribution,csb_sold,Are the full CSB supplies being sold?,Select one,"1. Yes
+2. No
+98. NR
+99. DK",Ind,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+96,,,,HH survey,Nutrition programme,% of children who are currently targeted through BSFP distribution,csb_sold_why,"If yes, why CSB sold?",Select one,"1. Not enough food
+2. CSB not making a difference 
+3. CSB making the child more sick
+4. The child was improving
+97. Other
+98. NR
+99. DK",Ind,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+97,,,,HH survey,Breastfeeding and infant nutrition,% of children ever breastfed,bf_ever,Has ${name_hh} ever been breastfed?,Select one,"1. Yes
+2. No
+3. NR
+4. DK",Ind,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+98,,,,HH survey,Breastfeeding and infant nutrition,% of children ever breastfed,breastfeeding_problem,"If yes, is the mother experiencing issues with breastfeeding?",Select one,"1. No issue experienced
+2. Not enough milk
+3. Breast problems (i.e. infection)
+4. Not enough time
+97. Other
+98. No repsonse
+99. Don't know",Ind,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+99,,,,HH survey,Breastfeeding and infant nutrition,% of children receiving supplementary feeding pratices,liquids_24h,Has this child had any of the following liquids yesterday during the last 24 hours? Check all that applies,Select multiple,"1. No liquid in the past 24 hours
+2. Powdered milk
+3. Canned milk
+4. Baby formula
+5. Fermented milk (kindirmo)
+6. Animal milk
+7. Breastmilk
+8. Fruit juice
+9. Water
+97. Other
+98. NR
+99. DK",Ind,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+100,,,,HH survey,Breastfeeding and infant nutrition,% of children receiving supplementary feeding pratices,solids_24h,"Did the child eat any of the following solid, semi-solid or soft foods in the past 24 hours?[check all that apply]",Select multiple,"1. No other foods in the past 24 hours
+2. Grains, roots or tubers
+3. Nuts or pulses
+4. Dairy products
+5. Vitamin A rich fruits and vegetables (mange, watermelon, sweet potato, carrot, …)
+6. Other fruits or vegetables
+98. NR
+99. DK",Ind,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+101,,,,HH survey,Nutrition programme access,% of children receiving nutrition treatment when needed,child_weightloss_where,"If the child is losing weight, where would you take him or her?",Select one,"1. Nowhere
+2. Hospital
+3. PHC
+4. Mobile/Outreach clinic
+5. Village outreach worker
+6. Private doctor
+7. Shop/seller
+8. Traditional practitioner
+9. Pharmacy/Dispensary
+97. Other
+98. No response
+99. Don't know",Ind,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+102,,What are the challenges of accessing health services for households and what is the vaccination status of children?,,HH survey,Morbidity - proxy,% of HHs with members ill in prior two weeks,sick_2weeks,Has anyone in your household been sick in the past two weeks?,Select one,"1. Yes
+2. No
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+103,,,,HH survey,Morbidity - proxy,% of HHs with members ill in prior two weeks,sick_illness,What symptoms or illness did the person have?,Select multiple,"1. Fever
+2. Cough
+3. Diarrhoea 
+4. Skin infections
+5. Eye infections
+6. Dizziness
+7. Vomiting
+8. Injury
+9. Persisting headache
+10. Stomach pains
+11. Heart problems
+12. Tooth aches
+13. Malaria
+14. Measles
+15. Cholera
+16. Sexually transmitted infection
+17. Mental illness symptoms
+97. Other
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+104,,,,HH survey,Health-seeking behaviour,% of HHs who have or would seek treatment at healthcare facilities,wouldseek_treatment,"Where would be the first place you would go for treatment, if a household member was sick?",Select one,"1. Would not seek treatment in a health facility
+2. Hospital
+3. PHC
+4. Mobile / outreach clinic
+5. Village outreach worker
+6. Private doctor
+7. Patent medicine store / Chemist
+8. Traditional practitioner
+9. Pharmacy / Dispensary
+97. Other
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+105,,,,HH survey,Access to health services,% of households with reasonable access to health facilities,cost_treatment,How much did it cost you / or would it cost you for a consultation at that place in NAIRA?,Integer,Integer,HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+106,,,,HH survey,Access to health services,% of households with reasonable access to health facilities,cost_treat_travel,"How much did it cost you / or would it cost you for to access the nearest health services in terms of transportation, lodging, or other non-drug expenses in NAIRA?",Integer,Integer,HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+107,,,,HH survey,Access to health services,% of households with reasonable access to health facilities,distance_hf,How far is the closest health facility to you?,Select one,"1. Within 2 km
+2. Within 2-5 km
+3. More than 5km
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+108,,,,HH survey,Access to health services,% of households with reasonable access to health facilities,type_hf,What type of health facility is it?,Select one,"1. Hospital (public or private)
+2. PHC
+3. Mobile / outreach clinic
+4. Village outreach worker
+5. Private doctor
+6. Patent medicine store / Chemist
+7. Traditional practitioner
+8. Pharmacy / Dispensary
+97. Other
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+109,,,,HH survey,Access to health services,% of households with reasonable access to health facilities,main_barrier_health,What are the barriers for your household in accessing health care?,Select multiple,"1. No barrier
+2. Services have high cost
+3. Medicine has high cost
+4. No qualified staff at health facility
+5.No medicine available at health facility
+6. Language barrier
+7. Medical staff refused treatment without explanation
+8. No treatment available for my disease at closest health facility
+9. PHC did not provide referral
+10. Health facility is too far away
+11. No transportation available
+12. Problems with civil documents
+13. PHC not open when you go
+14. No support from family to seek treatment at PHC or Hospital
+15. Health facility area is not secure due to presence of explosive hazards
+16. Health facility in an insafe location / travel unsafe due to presence of armed groups
+17. Road to go there is in too bad condition 
+18. Lack of female workers to attend to female patients
+19. Health worker refused treatment to woman or girl
+20. Lack of privacy in health facility
+97. Other
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+110,,,,HH survey,Vaccination,"% of children in HHs with adequate vaccination coverage for measles, pentavalent, polio",ask_vaccine_card,"Show the respondent the child health card, and measles vaccination cards. Ask them if they have them and can show you for ${name_hh}. ",,,Ind,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+111,,,,HH survey,Vaccination,"% of children in HHs with adequate vaccination coverage for measles, pentavalent, polio",measles,Has ${name_hh} received any measles vaccine?,Select one,"1. Yes, from mother reporting it
+2. Yes, from vaccination card/record
+3. No
+98. NR
+99. DK",Ind,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+112,,,,HH survey,Vaccination,"% of children in HHs with adequate vaccination coverage for measles, pentavalent, polio",measles_quant,How many times has ${name_hh} ever received measles vaccine?,Integer,Integer,Ind,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+113,,,,HH survey,Vaccination,"% of children in HHs with adequate vaccination coverage for measles, pentavalent, polio",penta,Has ${name_hh} received any PENTA vaccine shots?,Select one,"1. Yes, from mother reporting it
+2. Yes, from vaccination card/record
+3. No
+98. NR
+99. DK",Ind,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+114,,,,HH survey,Vaccination,"% of children in HHs with adequate vaccination coverage for measles, pentavalent, polio",penta_quant,How many PENTA shots has ${name_hh} ever received?,Integer,Integer,Ind,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+115,,,,HH survey,Vaccination,"% of children in HHs with adequate vaccination coverage for measles, pentavalent, polio",polio,Has ${name_hh} received any of the 3 polio (OPV) vaccine?,Select one,"1. Yes, from mother reporting it
+2. Yes, from vaccination card/record
+3. No
+98. NR
+99. DK",Ind,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+116,,,,HH survey,Vaccination,"% of children in HHs with adequate vaccination coverage for measles, pentavalent, polio",polio_quant,How many polio (OPV) vaccines has ${name_hh} ever received?,Integer,Integer,Ind,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+117,,,,HH survey,Maternal health,% of deliveries attended to by a skilled birth attendant,birth_lastyear,Has anyone in your household given birth in the last year?,Select one,"1. Yes
+2. No
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+118,,,,HH survey,Maternal health,% of deliveries attended to by a skilled birth attendant,birth_where,Where did she give birth?,Select one,"1. At NGO health facility
+2. At Government health faciltiy
+3. At home
+97. Other
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+119,,,,HH survey,Maternal health,% of deliveries attended to by a skilled birth attendant,birth_who,Who helped attend this birth?,Select one,"1. Skilled birth attendant (doctor, nurse, midwife)
+2. Other health care worker (heatlh volunteer, CHEW)
+3. Traditional birth attendant
+4. Other women in the community
+5. No support
+97. Other
+98. No response
+99. Don't know",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+120,,,,HH survey,Health assistance modality,% of HHs by preference of health support modality,cash_health,"If your household were to receive support for health, what method of support would you prefer?",Select one,"1. Do not want support
+2. Direct provision of health services
+3. Direct provision of medicines 
+3. Direct provision of transportation to health facilities
+4. Cash for health services fees
+5. Cash for medicine
+6. Cash for transportation support
+7. Mix of cash and provision of health services
+8. Mix of cash and provision of medicines
+97 Other
+98 No response
+99. Don't know",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+121,,"What are the issues related to water quantity and use, hygiene practices, menstrual cycle management and access to santitation for households?",,HH survey,Water,% of HHs having access to an improved water source,water_source_main,What are all the water sources your household used in the last 30 days for your household needs?,Select one,"1. Borehole / tubewell
+2. Public tap / standpipe
+3. Piped into dwelling or plot 
+4. Handpump
+5. Sealed well  
+6. Protected spring 
+7. Water truck 
+8. Sachet water 
+9. Surface water 
+10. Open well 
+11. Open rainwater tank 
+12. Spring 
+13. Water vendor / Mai moya 
+97. Other
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+122,,,,HH survey,Water,"% of HHs using less than 15L/person/day of water (for drinking, cooking, and bathing)",num_containers,How many different containers did you use to collect water from a water point in the last week?,Integer,integer,HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+123,,,,HH survey,Water,"% of HHs using less than 15L/person/day of water (for drinking, cooking, and bathing)",volume_ct,What is the volume of this container in LITRES?,Integer,integer,HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+124,,,,HH survey,Water,"% of HHs using less than 15L/person/day of water (for drinking, cooking, and bathing)",num_filled_ct,How many times was this container filled yesterday (or the last time water was collected)?,Integer,Integer,HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+125,,,,HH survey,Water,% of HHs for whom fetching water constitutes a problem,quality_water,Are there any problems with your drinking water?,Select multiple,"1. No problem
+2. Bad taste
+3. Bad smell
+4. Water appeared dirty
+5. Water is cloudy
+6. Water makes you sick
+97. Other
+98. No response
+99. Don't know",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+126,,,,HH survey,Water,% of HHs for whom fetching water constitutes a problem,fetch_prob_main,What are the problems your household has with fetching water?,Select multiple,"1. No problems
+2. Long distance
+3. Long wait time at water point
+4. The water point is not safe in general (insecurity, harassment, physical violence, kidnapping)
+5. The water point is not safe for women and girls (risk of sexual harassment or attack)
+6. The water point is not safe due to (actual or reported) presence of explosive hazards
+7. The water point is too expensive
+8. The water point area is dirty
+9. The water point is not easy to operate
+10. The water point is not functional / needs fixing
+11. The water point gives bad quality water
+97. Other
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+127,,,,HH survey,Water,% of HHs for whom fetching water constitutes a problem,water_time,"How long does it take to collect water from your main water source, including traveling back and forth and queuing time?",Select one,"1. At the household, no travel time
+2. Less than 15 minutes
+3. Between 15 and 30 minutes
+4. Between 30 minutes and 1 hour
+5. Between 1 and 2 hours
+6. Greater than 2 hours
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+128,,,,HH survey,Water,% of HHs for whom fetching water constitutes a problem,get_water_who,Who usually fetches water for the household?,Select one,"1. Boys (less than 12 yo) 
+2. Girls (less than 12 yo) 
+3. Adolescent boys (12-17 yo)
+4. Adolescent girl (12-17 yo)
+5. Adult men
+6. Adult women
+7. Elderly (over 60) 
+97. Other",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+129,,,,HH survey,Water,% of HHs possessing at least one clean covered container for drinking water,container_drinking,"Do you have a separate container to store drinking water?
+",Select one,"1. No separate container
+2. Separate closed container, reported clean
+3. Separate closed container, reported not cleaned
+4. Separate closed container, reported clean but visibly dirty
+5. Separate container utensiles/hands can enter inside
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+130,,,,HH survey,Hygiene,% of HHs having and using soap for washing hands,wash_hand,"Do you wash your hands?
+",Select one,"1. With soap
+2. With sand
+3. With ash
+4. With water only
+5. No, do not wash hands
+98. No response
+99. Don't know",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+131,,,,HH survey,Hygiene,% of HHs having and using soap for washing hands,wash_hand_yesterday,"IF YES, have you done it today or yesterday?",Select one,"1. Yes
+2. No
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+132,,,,HH survey,Hygiene,% of HHs having and using soap for washing hands,wash_hand_when,"IF YES, when did you do it?",Select multiple,"1. After defecation
+2. After cleaning children's faeces
+3. Before eating
+4. Before preparing food
+5. Before feeding a child
+6. Before praying
+97. Other
+98. No response
+99. Don't know",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+133,,,,HH survey,Sanitation,% of HHs and HH members accessing/using a functioning latrine,adult_defecate,Where do adult members of this household defecate?,Select one,"1. Traditional latrine (pit)
+2. Shared, private latrine (neighbour or friend)
+3. Personal, private latrine (household latrine)
+4. Public latrine (block latrine)
+5. Open space
+97. Other
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+134,,,,HH survey,Sanitation,% of HHs and HH members accessing/using a functioning latrine,child_defecate,Where do children members of this household defecate?,Select one,"1. Traditional latrine (pit)
+2. Shared, private latrine (neighbour or friend)
+3. Personal, private latrine (household latrine)
+4. Public latrine (block latrine)
+5. Open space
+97. Other
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+135,,,,HH survey,Sanitation,% of HHs and HH members accessing/using a functioning latrine,who_latrine_cant_use,Which members of your household don't have access or cannot use the latrine? ,Select multiple,"1. Children under 5 year old 
+2. Male children (between 5 and 18) 
+3. Female children (between 5 and 18) 
+4 Adult women 
+5 Adult men 
+6. Elderly (over 60) 
+7. People suffering from chronic illness or disabilities 
+8 All members
+9 Nobody 
+97. Other (please specify)
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+136,,,,HH survey,Sanitation,% of HHs and HH members accessing/using a functioning latrine,latrine_nouse_reason,What are the reasons those people cannot use the latrine?,Select multiple,"1. The latrine is damaged / not safe to use
+2. The latrine hole is too big and is not safe for children
+3. The latrine area is not safe
+4. The latrine is filled
+5. The latrine is dirty and smells
+6. The latrine is not adapted for disabilities
+7. Culturally inappropriate
+8. Fear of illness
+9. Distance to latrine
+97. Other
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+137,,,,HH survey,Sanitation,% of HHs and HH members accessing/using a functioning latrine,gender_latrine,Is the latrine seperated by gender or sex?,Select one,"1. Yes, separate and in different locations 
+2. Yes, separate and in same location
+3. No 
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+138,,,,HH survey,Sanitation,% of HHs and HH members accessing/using a functioning latrine,gender_latrine_ok,"If YES, are you comfortable with the sex segregation of latrines?",Select one,"1. Yes
+2. No
+98. No response
+99. Don't know",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+139,,,,HH survey,Hygiene - MHM,% of women and girls of a reproductive age having access to and the prefered mentrusal hygiene materials,mhm_material,What materials do you use for menstrual hygiene management?,Select multiple,"1. Disposable pads
+2. Reusable pads
+3. Cloth
+4. Nothing
+97. Other
+98. No response
+99. Don't know",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+140,,,,HH survey,Hygiene - MHM,% of women and girls of a reproductive age having access to and the prefered mentrusal hygiene materials,mhm_quality,Is the quality good enough?,Select one,"1. Yes
+2. No
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+141,,,,HH survey,Hygiene - MHM,% of women and girls of a reproductive age having access to and the prefered mentrusal hygiene materials,mhm_quantity,Is the quantity good enough?,Select one,"1. Yes
+2. No
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+142,,,,HH survey,Water,% of HHs resorting to negative coping strategies for insufficient water,coping_water,What do you do when you do not have enough water to meet your household needs?,Select multiple,"1. Reduce drinking water consumption
+2. Reduce water consumption for bathing, washing, cleaning
+3. Spend money usually spent on other things to buy water
+4. Go fetch water from a further water point than the usual one
+5. Receive water on credit or borrow water
+6. Drink water usually used for cleaning or other purposes
+7. Never have water quantity problems
+97. Other
+98. NR
+99. DK
+",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+143,,,,HH survey,WASH assistance modality preference,% of HHs by preference of WASH (NFI) support modality,cashforwash,"If your household were to receive support to obtain WASH related non-food item kits, what method of support would you prefer?",Select one,"1. Do not want support
+2. Direct provision of WASH kits
+3. Cash transfer to buy WASH kits
+4. Mix of WASH kits provision and cash
+5. Vouchers to buy WASH kits
+6. Mix of WASH kits provision and vouchers
+97 Other
+98 No response
+99. Don't know",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+144,,What are the issues related to shelter and NFIs for households?,,HH survey,Shelter type and occupancy,% of HHs by shelter type,type_shelter,What type of shelter is your HH currently living in?,Select one,"1. Masonry building
+2. Emergency shelter by an agency
+3. Transitional shelter by an agency
+4. In open / public space
+5. Traditional house (adobe / mud brick)
+6. Makeshift (thatch house with collected material)
+7. Tent
+8. Collective shetler (mosque, school, other public building)
+97. Other
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+145,,,,HH survey,Shelter type and occupancy,% of HHs by shelter occupancy arrangement,occupancy_status,"
+
+How is the shelter that your HH currently lives in occupied?",Select one,"1. Owned / Purchased
+2. Rented
+3. Squatted with permission
+4. Squatted without permission
+5, Hosted by relative, friend, close community member
+6. Hosted for free by external actors (example: camp)
+97. Other
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+146,,,,HH survey,Shelter type and occupancy,% of HHs by shelter occupancy arrangement,property_documentation,Do your HH have a property or land legal documentation?,Select one,"1. Yes
+2. No
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+147,,,,HH survey,Shelter type and occupancy,% of HHs by shelter occupancy arrangement,permission_squat,Who has granted you permission to live in this shelter?,Select one,"1. Community leader, bulama
+2. Owners of the shelter
+3. Religious leader
+4. LGA authorities
+5. SEMA/NEMA
+97. Other
+98. No response
+99. Don't know",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+148,,,,HH survey,Shelter type and occupancy,% of HHs by shelter occupancy arrangement,rent_contract_yn,Do you have a written rental contract?,Select one,"1. Yes
+2. No
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+149,,,,HH survey,Shelter type and occupancy,% of HHs by shelter occupancy arrangement,contract_months,How long is the contract for IN MONTHS?,Integer,"Integer
+",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+150,,,,HH survey,Shelter type and occupancy,% of HHs by shelter occupancy arrangement,number_families_share,"How many HOUSEHOLDS, including yours, share your current accomodation? ",Integer,Integer,HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+151,,,,HH survey,Eviction,% of HHs at risk of eviction,eviction_threat,Are you at risk of being evicted or forced to leave this shelter within the next month?,Select one,"1. Yes
+2. No
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+152,,,,HH survey,Shelter damage,% of HHs with shelter damage,damage_status,Is your shelter damaged?,Select one,"1. Yes
+2. No
+99. Don't know",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+153,,,,HH survey,Shelter damage,% of HHs with shelter damage,damage_causes,What is the cause of the damage?,Select one,"1. Bullet holes
+2. Fire damage
+3. Wind/Storm damage
+4. Flood damage
+5. Other environmental damage (example wood damaged by termites)
+97. Other",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+154,,,,HH survey,Shelter damage,% of HHs with shelter damage,damage_severity,What is the severity of the damage to the shelter overall?,Select one,"1. No to little damage only, does not present any structural risk
+2. Partially damaged - presenting some structural risk but still liveable
+3. Completely destroyed
+",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+155,,,,HH survey,NFI,% of HHs in need of basic NFIs,needs_items,What are the non-food items that your HH does not have and that it NEEDS?,Select multiple,"1. Have all of these / Do not need any of those
+2. Blankets
+3. Sleeping mat
+4. Mosquito net
+5. Jerry can
+6. Laundry detergent / bars
+7. Bath soap
+8. Reusable sanitary pad
+9. Solar lamp
+10. Foldable mattress
+11. Kettle
+12. 10L basin
+13. Rope
+14. Kitchen items kit (cooking pot, tray, cups, spoons, kitchen knife)
+15. 10L bucket
+16. Aquatabs
+17. Learners materials (notebook, textook, school bag)",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+156,,,,HH survey,Shelter assistance modality preference,% of HHs by preference of shelter support modality,cashforshelter,"If your household were to receive support for shelter, what method of support would you prefer?",Select one,"1. Do not want support
+2. Cash to pay rent
+3. Directly provide materials to repair shelter
+4. Directly provide materials to build shelter
+5. Cash for materials to repair shelter
+6. Cash for materials to build shelter
+7. Mix of cash and materials to repair shelter
+8. Mix of cash and materials to build shelter
+97 Other
+98 No response
+99 Don't know",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+157,,"What are the issues related to food quantity and access, availability of firewood/fuel and practices of agriculture for households?",,HH survey,HH food sources,% of HHs by means of accessing food,food_source_main,What sources of food has your household used in the last month?,Select multiple,"1. Purchased in local markets
+2. Markets located outside the community / elsewhere
+3. Own agriculture/Crop cultivation
+4. Own livestock production 
+5. Food aid/assistance from NGO
+5. Food aid/assistance from government / NEMA / SEMA
+6. Assistance/Support from relatives, neighbours and friends
+7. Foraged wild foods
+8. Consumed planting material / seed stock
+97. Other
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+158,,,,HH survey,Market,% of HHs by means of accessing food,food_barrier_main,What barriers does your household have currently in accessing enough food?,Select multiple,"1. None
+2. Market is too far away
+3. Transportation to market is too expensive
+4. Food is too expensive
+5. Food not available in the market
+6. Food not being distributed
+7. Cannot access market due to insecurity
+8. Cannot access land at all to grow food because lack permission from land owners
+9. Cannot access land at all to grow food due to presence of explosive items (landmines, unexploded bombs, etc.)
+10. Cannot access land at all to grow food due to insecurity
+11. Cannot access enough land to cultivate adequate amount of food
+12. Cannot access market due to movement restrictions by armed groups or military
+97. Other
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+159,,,,HH survey,FCS,% of HHs by food consumption scores (FCS),0,"CEREALS or TUBERS (maize, rice, sorghum, millet, pasta, bread, cassava, potatoes, sweet potatoes, plantains, or other cereals)",Integer,Integer,HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+160,,,,HH survey,FCS,% of HHs by food consumption scores (FCS),0,"Over the last 7 days, how many days did you consume: PULSES, NUTS & SEEDS",Integer,Integer,HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+161,,,,HH survey,FCS,% of HHs by food consumption scores (FCS),0,"Over the last 7 days, how many days did you consume: VEGETABLES (tomatoes, lettuce, cabbage, amaranth, okra, sorrel)",Integer,Integer,HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+162,,,,HH survey,FCS,% of HHs by food consumption scores (FCS),0,"Over the last 7 days, how many days did you consume: FRUITS (apples, oranges, bananas)",Integer,Integer,HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+163,,,,HH survey,FCS,% of HHs by food consumption scores (FCS),0,"Over the last 7 days, how many days did you consume: MEAT OR FISH (red meat, chicken, including internal, fish, seafood)",Integer,Integer,HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+164,,,,HH survey,FCS,% of HHs by food consumption scores (FCS),0,"Over the last 7 days, how many days did you consume: EGGS",Integer,Integer,HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+165,,,,HH survey,FCS,% of HHs by food consumption scores (FCS),0,"Over the last 7 days, how many days did you consume: MILK AND DAIRY PRODUCTS (milk, cheese, yoghurt, etc.)",Integer,Integer,HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+166,,,,HH survey,FCS,% of HHs by food consumption scores (FCS),0,"Over the last 7 days, how many days did you consume: OIL AND FATS",Integer,Integer,HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+167,,,,HH survey,FCS,% of HHs by food consumption scores (FCS),0,"Over the last 7 days, how many days did you consume: SWEETS (sugar, honey, jam, cakes, candy, etc.)",Integer,Integer,HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+168,,,,HH survey,FCS,% of HHs by food consumption scores (FCS),0,"Over the last 7 days, how many days did you consume: SPICES AND CONDIMENTS",Integer,Integer,HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+169,,,,HH survey,rCSI,% of HHs by reduced Coping Strategy Index/rCSI,0,"In the past 7 days, how many days did you have to rely on less preferred foods and less expensive foods o cope with the lack of food?",Integer,Integer,HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+170,,,,HH survey,rCSI,% of HHs by reduced Coping Strategy Index/rCSI,0,"In the past 7 days, how many days did you have to borrow food or rely on help from friends or relatives to cope with the lack of food?",Integer,Integer,HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+171,,,,HH survey,rCSI,% of HHs by reduced Coping Strategy Index/rCSI,0,"In the past 7 days, how many days did you have to limit portion size at mealtime to cope with the lack of food?",Integer,Integer,HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+172,,,,HH survey,rCSI,% of HHs by reduced Coping Strategy Index/rCSI,0,"In the past 7 days, how many days did you have to restrict consumption by adults in order for small chidlren to eat to cope with the lack of food?",Integer,Integer,HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+173,,,,HH survey,rCSI,% of HHs by reduced Coping Strategy Index/rCSI,0,"In the past 7 days, how many days did you have to reduce number of meals eaten in a day to cope with the lack of food?",Integer,Integer,HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+174,,,,HH survey,Market,% of HHs with market access,market_access,Have you had physical access to a market in the last two weeks?,Select one,"1. Yes
+2. No
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+175,,,,HH survey,Food assistance modality preference,% of HHs by preference of food support modality,cashforfood,"If your household were to receive support for food, what method of support would you prefer?",Select one,"1. Cash support
+2. In-kind food support
+3. Mix of cash and in-kind
+4. Voucher
+97. Other
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+176,,,,HH survey,Fuel availability and use,% of HHs with access to firewood in the surrounding environment,safe_enough,Do you have sufficient access to firewood/fuel to meet your daily energy needs?,Select one,"1. Yes
+2. No
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+177,,,,HH survey,Fuel availability and use,% of HHs by most commonly used fuel type for cooking,0,What is the most common source of fuel used for cooking in your household?,Select one,"1. Firewood
+2. Charcoal
+3. Kerosene
+4. Animal dung
+5. Agricultural waste (crop residue)
+6. Gas
+97. Other
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+178,,,,HH survey,Fuel availability and use,% of HHs by means of obtaining firewood/fuel for cooking,0,What is your primary means of obtaining firewood or whichever fuel source you primarly use?,Select one,"1. Purchase from local seller
+2. Collect directly from within the community
+3. Collect directly from outside the community
+4. Trade goods / items for fuel
+5. From NGOs assistance / aid
+97. Other
+98. NR
+99. DK
+",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+179,,,,HH survey,Fuel availability and use,% of HHs by means of obtaining firewood/fuel for cooking,safe_fuel_woodtrips,Does anyone in your household make trips to collect firewood for household use or for selling?,,"1.Yes
+2. No
+98. No response
+99. Don't know",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+180,,,,HH survey,Fuel availability and use,% of HHs by means of obtaining firewood/fuel for cooking,safe_get_fuel_who,Who usually collects firewood for the household?,,"1. Boys (less than 12 yo) 
+2. Girls (less than 12 yo) 
+3. Adolescent boys (12-17 yo)
+4. Adolescent girl (12-17 yo)
+5. Adult men
+6. Adult women
+7. Elderly (over 60) 
+97. Other",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+181,,,,HH survey,Fuel availability and use,% of HHs by means of obtaining firewood/fuel for cooking,0,Do you or the HH member collecting firefood or whichever fuel source you primarily use face any of those protection risks?,Select multiple,"1. No risk faced
+2. Verbal harassment
+3. Physical violence
+4. Sexual harassment or violence
+5. Kidnapping
+6. Risk related to explosive hazards
+97. Other
+98. No response
+99. Don't know",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+182,,,,HH survey,Coping mechanisms for fuel,% of HHs by coping strategies for insufficient fuel,0,What does your household do when there is insufficient fuel for your needs?,Select multiple,"1. Nothing
+2. Reduce number of meals
+3. Selling food/rations to buy fuel
+4. Undercooking food
+5. Use less preferred fuel source (animal dung, etc.)
+6. Eating raw food
+7. Cook with other families together (communal cooking)
+97. Other
+98. NR
+99. DK
+",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+183,,,,HH survey,Income,% of HHs by main income source,0,What are the sources of income for the household?,Select multiple,"0. No income 
+1. Agricutlure
+2. Livestock
+3. Fishery
+4. Trade
+5. Remittance (relatives send money)
+6. Regular salaried employment
+7. Small business
+8. Casual wage labour
+9. Selling of natural resources (charcoal, grass, firewood)
+10. Sewing
+11. Baking
+12. Transportation
+13. Begging
+97. Other
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+184,,,,HH survey,Access to land and seeds,% of HHs needing but unable to access land for crop cultivation or grazing,0,"During this last year, did you access land for any of the following reasons?",Select one,"1. Did not need to access
+2. Growing crops
+3. Grazing livestock
+97. Other",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+185,,,,HH survey,Access to land and seeds,% of HHs needing but unable to access land for crop cultivation or grazing,0,Were you able to access the land you needed?,Select one,"1. Yes, accessed amount land needed
+2. Yes, but didn't access amount of land needed
+3. No, did not access any land",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+186,,,,HH survey,Access to land and seeds,% of HHs needing but unable to access land for crop cultivation or grazing,0,What barriers are there for your household in accessing land needed for farming or herding?,Select multiple,"1. Presence of explosive items (landmines, unexploded bombs, etc.)
+2. Someone else has taken the land
+3. It is not safe to farm there / insecurity
+4. Charges from land owners too expensive
+5. No barriers
+97. Other
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+187,,,,HH survey,Access to land and seeds,% of HHs needing but unable to access seeds for crop cultivation/farming,agric_inputs,"During this last year, did you access seeds and other agricultural inputs needed?",Select one,"1. Yes, accessed amount of seeds and other agric inputs needed
+2. Yes, but didn't access amount of seeds and other agric inputs needed
+3. No, did not access any",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+188,,,,HH survey,Access to land and seeds,% of HHs needing but unable to access seeds for crop cultivation/farming,0,What are the major challenges to accessing seeds and other agric inputs?,Select one,"1. Lack of availability in the market
+2. High cost of seeds and other agric inputs
+3, No barriers
+97. other
+98. No response
+99. Don't know",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+189,,,,HH survey,Coping mechanisms for livelihoods,% of HHs by main coping strategies for lack of income or resources,0,"In the last 30 days, did your household do one of the following things to cope with lack of income / or because you were unable to meet your needs? ",Select one,"1. Sell household assets/good (furniSture, television, jewelry, etc.)
+2. Spend savings
+3. Sell more animals (non-productive) than usual if working in farming/herding
+4. Send household members to eat elsewhere
+5. Purchase food on credit or borrowed food
+6. Borrow money
+7. Depend on support from family/host family/external assistance
+8. Sell productive assets, or means of transport (sewing machine, agricultural machinery/vehicles, cars, bicycle, etc.)
+9. Withdraw children from school
+10. Reduce expenditure on other services like health and education
+11. Harvest immature crops (green maize)
+12. Consume seed stocks that were to be saved for the next season 
+13. decrease expenditure on fertilizer, pesticide, animal feed, veterinary care, etc.
+14. Sell land or property
+15. Beg for money
+16. Engage in dangerous or illegal work/activity (incl. theft, illegal substances dealing, prostitution)
+17. Sell last female (productive) animals
+18. Marriage of a HH member under the age of 18",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+190,,What are the issues related to household livelihoods and access to critical public infrastructure?,,HH survey,HH economy,% of HHs in debt,0,Is your household in debt (of money)?,Select one,"1. Yes
+2. No
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+191,,,,HH survey,HH economy,% of HHs by main source of access to cash,cash_access,What is your main souce of access to physical cash?,Select one,"1. No access to cash
+2. Bank withdrawal - ATM 
+3. Bank withdrawal - counter 
+4. Formal money transfer (western union, money agent, etc.)
+5. Informal money transfer (informal transfer networks)
+6. Mobile phone money transfer
+7. Hand to hand 
+97. Other
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+192,,,,HH survey,Infrastructure,% of HHs with access to functional basic public facilities and  infrastructure ,bank,Is there a branch of a Nigeria registered bank in your community?,Select one,"1. Yes
+2. No
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+193,,,,HH survey,Infrastructure,% of HHs with access to functional basic public facilities and  infrastructure ,0,Is there a debris or waste management colection service in your community / site?,Select one,"1. Yes
+2. No
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+194,,,,HH survey,Infrastructure,% of HHs with access to functional basic public facilities and  infrastructure ,trash_disposal,What is the most common way your household disposed of garbage in the last 30 days?,Select one,"1. Trash deposited in bins, collected by waste management committee
+2. Trash deposited in bins, collected by public authorities
+3. Trash left in open area, not collected
+4. Trash left in a dedicated area, not collected
+5. Trash left in a community pit
+6. Garbage buried at home
+7. Garbage burned at home
+8. In or near latrines
+9. In or near drainage
+97. Other
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+195,,,,HH survey,Infrastructure,% of HHs with access to community security initiatives ,community_security_initiative,"Is there an existing COMMUNITY security initiative in your area (APART FROM Nigeria Police, Nigerian Security and Civil Defense Corps, Nigerian Immigration, and Nigerian Customs Service)?",Select one,"1. Yes
+2. No
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+196,,,,HH survey,Infrastructure,% of HHs with access to functional community security initiatives ,access_gov,Do you have reasonable access (within 2km) to the a) police station; b) local government authorities,Select one,"1. Yes, both within 2km
+2. Only police station within 2km
+3. Only local authorities within 2km
+4. No, both more than 2km away
+98. No repsonse
+99. Don't know",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+197,,,,HH survey,Livelihoods assistance modaility preference,% of HHs with access to functional community security initiatives ,0,"If your household were to receive income support, what method of support would you prefer?",Select one,"1. Direct In-kind support (in-kind distributions of livelihoods assets, agricultural assets, etc.)
+2. Receive cash directly
+3. Receive mobile cash/credit
+4. Cash vouchers to exchange for goods
+5. Provision of vocational trainings
+6. Don't want any income support
+97. Other
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+198,,What are the issues related to access to education in the household?,,HH survey,School enrollment,% of school-aged children in households by enrolment status to formal or informal education,0,What is the current FORMAL school enrollment status of this child?,Select one,"1. Never attended any formal school
+2. Dropped out this year
+3. Currently attending preschool
+4. Currently attending primary school
+5. Currently attending lower secondary school
+6. Currently attending secondary school / high school
+98. NR
+99. DK",Ind,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+199,,,,HH survey,School enrollment,% of school-aged children in households by enrolment status to formal or informal education,0,What is the current INFORMAL school enrollment status of this child?,Select one,"1. Never attended any informal school
+2. Dropped out this year
+3. Attending Islamia school
+4. Attending Accelerated Learning Programme
+97. Other
+98. NR
+99. DK",Ind,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+200,,,,HH survey,Barriers to education,% of HHs by main barriers to accessing education,education_barrier_main,What are the barriers your household faces with sending children in general to formal school?,Select multiple,"1. No barrier
+2. Could not pay school fees
+3. Child has been out of school too many years to return
+4. Resistance to formal education
+5. Children lacking appropriate clothing/uniform
+6. Displaced by conflict
+7. Children busy working at home
+8. Children begging
+9. Child helping with planting/harvest season
+10. Child found job/hawking
+11. Child has disability and school cannot accommodate
+12. The school is not functional (broken down)
+13. School is too far away
+14. The school is full, will not accept more students
+15. The school has poor quality education
+16. Inadequate or no WASH facilities at school
+17. There are not enough teachers
+18. Insecurity, our children might get abducted at school
+19. Insecurity on the way to school or in the area (real or perceived)
+20. There are armed groups occupying the school (military, AOGs, CJTF)
+21. Child joined military/armed group 
+97. Other
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+201,,,,HH survey,Barriers to education,% of HHs by main barriers for girl-child to accessing education,education_barrier_girls,What are the barriers your girl-child in particular faces with going to formal school?,Select multiple,"1. No barrier
+2. Could not pay school fees
+3. Child has been out of school too many years to return
+4. Resistance to formal education
+5. Children lacking appropriate clothing/uniform
+6. Displaced by conflict
+7. Children busy working at home
+8. Children begging
+9. Child helping with planting/harvest season
+10. Child found job/hawking
+11. Child has disability and school cannot accommodate
+12. The school is not functional (broken down)
+13. School is too far away
+14. The school is full, will not accept more students
+15. The school has poor quality education
+16. Inadequate or no WASH facilities at school
+17. There are not enough teachers
+18. Insecurity, our children might get abducted at school
+19. Insecurity on the way to school or in the area (real or perceived)
+20. There are armed groups occupying the school (military, AOGs, CJTF)
+21. Child joined military/armed group 
+22. Marriage
+23. Pregnancy
+24. Attendance disturbed or prevented by menstrual cycle
+97. Other
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+202,,,,HH survey,Education assistance modality preference,% of HHs by preference of education support modality,cash_education,"If your household were to receive support for education, what method of support would you prefer?",Selec one,"1. Do not want support
+2. Direct provision of school supplies (bags, pencils)
+3. Direct provision of text books
+4. Direct provision of transportation to school
+5. Cash for school fees
+6. Cash for school supplies (bags, pencils)
+7. Cash for text books
+8. Cash for transporation to school
+9. Mix of cash and provision of school supplies
+10. Mix of cash and provision of text books+E4
+11. Provision of Integrated Quaranic Education(IQE)
+97. Other
+98. No response
+99. Don't know",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+203,,"What are the issues related to safety and security, legal documentation and movement restrictions for households?",,HH survey,Safety and Security,% of HHs experiencing security incidents in the past 3 months,0,"Has anyone in your household experienced any security incidents in the last three months by armed groups, people in the community or other actors?",Select one,"1. Yes
+2. No
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+204,,,,HH survey,Safety and Security,% of HHs experiencing security incidents in the past 3 months,security_type,What was the security incident?,Select multiple,"1. Killings
+2. Physical violence
+3. Abduction or forced recruitment of adults
+4. Abduction or forced recruitment of children
+5. Armed attacks 
+6. Fire outbreak
+7. Destruction of properties / Looting
+8. Incident related to explosive hazards
+9. Sexual assault / Gender-based violence
+97. Other
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+205,,,,HH survey,Safety and Security,% of HHs experiencing security incidents in the past 3 months,0,Where did this/these incident/s take place?,Select one,"1. In current location
+2. While traveling between area of origin and current location
+3. In village/area of origin
+4. In area around/close of current community (e.g. while collecting firewood or water, in farm land, etc.)
+97. Other
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+206,,,,HH survey,Legal documentation,% of adults and children lacking legal documentation,num_nodocs,"Of the ADULTS (18+) in the household, how many have NO form of legal documentation?",Integer,Integer,HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+207,,,,HH survey,Legal documentation,% of adults and children lacking legal documentation,birth_cert,"Of the CHILDREN (0-17) in the household, how many have NO birth certificate?",Integer,Integer,HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+208,,,,HH survey,Legal documentation,% of adults and children lacking legal documentation,doc_challenge,Have any members of your household faced challenges due to lack of documentation?,Select multiple,"1. No challenge
+2. Children unable to attend school
+3. Unable to move freely within town/community
+4. Unable to move freely for work
+5. Arrest/detention by CJTF or military
+6. Unable tor register for vote
+97. Other
+98. No response
+99. Don't know",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+209,,,,HH survey,Freedom of movement,% of HHs with challenges to freedom of movement,move_restriction_yn,Has anyone in your household experienced movement restrictions in your area in the last 3 months? ,Select one,"1. Yes, but only during the evening and nighttime
+2. Yes, but only if in large groups
+3. Yes, complete movement restrictions
+4. Yes, from 2km outside of the camp or community
+5. Yes, but only if no means of identification
+6. No movement restrictions
+97. Other
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+210,,,,HH survey,Freedom of movement,% of HHs with challenges to freedom of movement,reason_restriction,What are the reasons for your restricted movement?,Select one,"1. Self-imposed, perceive the area is not safe due to armed groups
+2. Self-imposed, perceive the area is not safe due to explosive hazards
+3. Military sets curfew/restriction
+97. Other
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+211,,,,HH survey,Freedom of movement,% of HHs with challenges to freedom of movement,restriction_permit_needed,"[If YES, and HH located in formal camp] Do you need a permit/document delivered by site management workers or local authorities to enter and leave the camp at all times?",Select one,"1. Yes
+2. No
+98. No response
+99. Don't know",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+212,,,,HH survey,Missing HH members,% of HHs reporting a member missing or detained,0,Is there any adult of your household who is missing or being detained?,Select one,"1. Yes
+2. No
+98. No response
+99. Don't know",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+213,,,,HH survey,Missing HH members,% of HHs reporting a member missing or detained,0,Is there any child of your household who is missing or being detained?,Select one,"1. Yes
+2. No
+98. No response
+99. Don't know",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+214,,,,HH survey,Missing HH members,% of HHs reporting a member missing or detained,missing_detained_adult_happen,Do you know what happened to that ADULT(s)?,Select multiple,"6. Adult man taken by AOGs / Boko Haram
+7. Adult woman taken by AOGs / Boko Haram
+8. Adult man detained by police/military
+9. Adult woman detained by police/military
+11. Adult lost during HH displacement / movement
+97. Other
+98. No response
+99. Don't know",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+215,,,,HH survey,Missing HH members,% of HHs reporting a member missing or detained,missing_detained_child_happen,Do you know what happened to that CHILD(ren)?,Select multiple,"1. Boy child taken by AOGs / Boko Haram
+2. Girl child taken by AOGs / Boko Haram
+3. Boy child taken by CJTF
+4. Girl child taken by CJTF
+5. Child trafficked out of state/country
+10. Child lost during HH displacement / movement
+12. Child detained by police / military
+97. Other
+98. No response
+99. Don't know",,,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+216,,,,HH survey,Labour exploitation,% of HHs reporting a member experiencing an incident linked to human and/or labour trafficking,labour_exploitation,Did any of these work experiences happen to someone from your household in this area/nearby?,Select multiple,"1. Working for someone but not getting the payment
+2. Forced to perform work against their will
+3. Excessive working hours
+4. Receive less payment than what they were promised at the beginning
+5. Receive less than what other people in the community were receiving for the same kind of work
+6. Denied freedom of movement whilst at work
+7. Denied food/drink/medical treatment
+8. None of these experienced
+98. No response
+99. Don't know",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+217,,,,HH survey,Labour exploitation,% of HHs reporting a member experiencing an incident linked to human and/or labour trafficking,labour_exploitation_who,"IF YES, to whom did it happen?",Select multiple,"1. Men
+2. Women
+3. Boys
+4. Girls
+5. Elderly
+98. No response
+99. Don't know",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+218,,,,HH survey,Labour exploitation,% of HHs reporting a member experiencing an incident linked to human and/or labour trafficking,labour_exploitation_work,"IF YES, what type of work was the household member doing?",Select multiple,"1. Household/Domestic work (in other HH)
+2. Farming / Agriculture 
+3. Construction
+4. Mining
+5. Fishing industry
+6. Hotel-Restaurant/Hospitality
+97. Other
+98. No response
+99. Don't know",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+219,,,,HH survey,Human exploitation,% of HHs reporting a member experiencing an incident linked to human and/or labour trafficking,human_trafficking,Have you or any member of your household been approached by someone from this camp/community with offers of employment or other opportunities either within Nigeria or outside Nigeria?,Select one,"1. Yes
+2. No
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+220,,,,HH survey,Human exploitation,% of HHs reporting a member experiencing an incident linked to human and/or labour trafficking,0,"If yes, what kind of activities of restriction affected the member of the household?",Select multiple,"1. Work or perform other activities against your will
+2. Arrange a marriage (for you or close family member - child or sibling)
+3. Kept at a certain location against your will (by persons other than the authorities of the country)",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+221,,"How is the access to child- and woman-protection services in the area, and what are the issues related to mental health in the households?",,HH survey,Access to CP/GBV services,% of HHs reporting access to a CFS or FFS in their area,0,"A child friendly space is any place in the community where children can go to play, learn or be children in a safe, supportive environment. 
+
+Is there any kind of place like this in your community?",Select multiple,"1. No place
+2. NGO run child friendly space
+3. Park
+4. Nursery
+5. Playground
+97. Other
+98. NR
+99. DK
+",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+222,,,,HH survey,Access to CP/GBV services,% of HHs reporting access to a CFS or FFS in their area,cfs_access,Does your child have access to this place?,Select one,"1. Yes
+2. No
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+223,,,,HH survey,Access to CP/GBV services,% of HHs reporting access to a CFS or FFS in their area,ffs,Is there a space in the community where girls and women can gather safely in the community?,Select multiple,"1. No place
+2. Women Friendly Space (NGO run)
+3. Women Support groups at community location
+4. Women Support groups at a household
+5. Sewing groups
+6. Religious centre
+97. Other group or public space
+98. No response
+99. Don't know",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+224,,,,HH survey,Access to CP/GBV services,% of HHs reporting access to a CFS or FFS in their area,0,Do women in your household have access to that place?,Select one,"1. Yes
+2. No
+98. NR
+99. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+225,,,,HH survey,Psychosocial distress,% of HHs with one of several members that report experiencing signs of psychological distress,mhpss_needs,"Within the past 2 weeks, how have you been feeling? Have you or someone in your household experienced any of the following? ",Select multiple,"1. Feeling little interest or pleasure doing things that you/they normally like
+2. Feeling down, depressed or hopeless
+3. Feeling tired or having little energy for no good reason
+4. Trouble falling asleep, staying asleep or sleeping too much
+5. Felt so nervous that nothing could calm you/ them down
+6. Felt so afraid that nothing could calm you/ them down
+7. Felt so angry that you felt out of control",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+226,,What are the issues related to access to information and assistance? What are the specific issues related to protection mainstreaming?,,HH survey,Language and Information,% of HHs by information needs and preference,aid_info_types,What type of information would you like to receive from aid providers? Please choose top 3,Select multiple,"1. No need for information
+2. News on what is happening in your original home if displaced
+3. News on what is happening in your current location
+4. Finding missing people
+5. Security situation in current location
+6. How to register for assistance in food/water/cash/fuel/shelter
+7. How to access health or nutrition services
+8. How to get access to school and education for children
+9. Prices for food, crops, livestock
+10. How to get help after sexual attack/harassment
+11. How to stay safe to prevent sexual attack/harassment
+12. How to replace legal personal documentation (ID, birth certificate)
+13. How to find work
+14. How to get transportation
+15. Info about possible return to area of origin if IDP
+16. Info about relocation
+17. Info about aid agencies they are receiving aid from
+18. How to complain about the aid you receive
+19. How to complain about bad behaviour of aid workers
+20. What behaviour to expect from aid workers
+21. How to access justice / legal action
+97. Other 
+98. No response
+99. Don't know",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+227,,,,HH survey,Language and Information,% of HHs by information needs and preference,aid_prefwho,Who do you trust the most to provide you with reliable information? Please choose top 3,Select one,"1. Community leader (bulama, lawan)
+2. Religious leader
+3. State/Federal/Government official
+4. Local/Ward government official
+5. CJTF
+6. Military officials
+7. Friends/Family
+8. Aid workers from UN
+9. Aid workers from local NGOs
+10. Aid workers from INGOs
+97. Other
+98. No response
+99. Don't know",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+228,,,,HH survey,Language and Information,% of HHs by information needs and preference,aid_prefmode,What means of receiving information do you trust the most? Please choose top 3,Select one,"1. Phone call (mobile phone)
+2. Text message (mobile phone)
+3. Radio
+4. In person / face to face
+5. Facebook
+6. Twitter
+7. Whatsapp
+8. Posters
+9. Information desks in camps
+10. Community events
+11. Leaflets
+12. Loudspeaker
+97. Other
+98. No response
+99. Don't know",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+229,,,,HH survey,Language and Information,% of HHs by feedback preference,aid_feedbacks,"How would you prefer to provide feedback to aid providers about the quality, quantity and appropriateness of the aid you have or will receive?",Select one,"1. Don’t want to give feedback
+2. Face to face to aid worker at home
+3. Face to face to aid worker at office / other location
+4. Face to face to member of the community
+5. Phone call (mobile phone)
+6. Text message (mobile phone)
+7. Complaints/Suggestion box
+97. Other
+98. No response
+99. Don't know",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+230,,,,HH survey,Language and Information,% of HHs reporting main language spoken at home,aid_languages,What is the main language you speak at home?,Select one,"1. Bachama
+2. Bura
+3. English
+4. Fulfulde
+5. Gamargu
+6. Glavda
+7. Hausa
+8. Higgi
+9. Jukun
+10. Kanuri
+11. Kare kare
+12. Kibaku
+13. Kilba
+14. Mafa
+15. Mandara
+16. Marghi
+17. Shuwa Arabic
+18. Tiv
+19. Waha
+97. Other
+98. No response
+99. Don't know",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+231,,,,HH survey,Language and Information,% of HHs reporting preferred language and means to receive information,0,Which language do you prefer to receive written information in?,Select one,"1. Bachama
+2. Bura
+3. English
+4. Fulfulde
+5. Gamargu
+6. Glavda
+7. Hausa
+8. Higgi
+9. Jukun
+10. Kanuri
+11. Kare kare
+12. Kibaku
+13. Kilba
+14. Mafa
+15. Mandara
+16. Marghi
+17. Shuwa Arabic
+18. Tiv
+19. Waha
+97. Other
+98. No response
+99. Don't know",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+232,,,,HH survey,Language and Information,% of HHs reporting preferred language and means to receive information,0,Which language do you prefer to receive verbal information in?,Select one,"1. Bachama
+2. Bura
+3. English
+4. Fulfulde
+5. Gamargu
+6. Glavda
+7. Hausa
+8. Higgi
+9. Jukun
+10. Kanuri
+11. Kare kare
+12. Kibaku
+13. Kilba
+14. Mafa
+15. Mandara
+16. Marghi
+17. Shuwa Arabic
+18. Tiv
+19. Waha
+97. Other
+98. No response
+99. Don't know",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+233,,,,HH survey,Language and Information,% of HHs by fluency of Hausa language,aid_hausa_spoken,How well do you speak Hausa?,Select one,"1. Fluently
+2. Well
+3. Very little
+4. Not at all",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+234,,,,HH survey,Language and Information,% of HHs by fluency of Hausa language,aid_hausa_read,How well do you read Hausa?,Select one,"1. Fluently
+2. Well
+3. Very little
+4. Not at all",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+235,,,,HH survey,Language and Information,% of HHs reporting access to means of communication and information,aid_access_phone,Does your household own a cell phone?,Select one,"1. Yes
+2. No
+3. NR
+4. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+236,,,,HH survey,Language and Information,% of HHs reporting access to means of communication and information,aid_access_network,Which network do you use?,Select multiple,"1. Airtel
+2. MTN
+3. Glo/Etisalat
+97. Other
+98. No response
+99. Don't know",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+237,,,,HH survey,Language and Information,% of HHs reporting access to means of communication and information,aid_access_internet,Do you access the internet or social media on your cell phone?,Select one,"1. Yes
+2. No
+3. NR
+4. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+238,,,,HH survey,Language and Information,% of HHs reporting access to means of communication and information,aid_access_radio,Does your household own a radio?,Select one,"1. Yes
+2. No
+3. NR
+4. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+239,,,,HH survey,Language and Information,% of HHs reporting access to means of communication and information,aid_radio,Which stations do you listen to?,Select multiple,"1. ABC Yola FM
+2. BBC
+3. BRTV
+4. Dandal kura
+5. Demsa Cameroon FM
+6. Deutsche Welle
+7. Fombina FM
+8. Gotel FM
+9. Kanem FM
+10. Unimaid radio
+11. Lafiya Dole
+12. Peace FM
+13. Pulaaku FM
+14. Radio France Internationale (RFI)
+15. Voice of America
+97. Other
+98. No response
+99. Don't know",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+240,,,,HH survey,Language and Information,% of HHs reporting access to means of communication and information,aid_radio_time,What time of the day do you listen to the radio? Select all that apply,Select multiple,"1. Morning
+2. Mid-day
+3. Afternoon
+4. Evening",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+241,,,,HH survey,Assistance and Protection Mainstreaming,"% of HHs reporting that humanitarian assistance was delivered in a safe, accessible, accountable and participatory manner",aid_receive,"Has your household received any assistance in the past 6 months, from any sources?",Select one,"1. Yes
+2. No
+3. NR
+4. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+242,,,,HH survey,Assistance and Protection Mainstreaming,"% of HHs reporting that humanitarian assistance was delivered in a safe, accessible, accountable and participatory manner",0,What was the main source of the assistance?,Select one,"1. INGO / UN
+2. Local NGO
+3. Government
+4. Community
+97. Other.
+98. No response
+99. Don't know",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+243,,,,HH survey,Assistance and Protection Mainstreaming,"% of HHs reporting that humanitarian assistance was delivered in a safe, accessible, accountable and participatory manner",0,What was the type or types of assistance?,Select one,"1. WASH support (water, infrastructure or hygiene promotion)
+2. Food support
+3. Livelihoods support (vocational trainings, assets, etc.)
+4. Health support
+5. Mental health support
+6. Nutrition support
+7. Protection services - security
+8. Protection services - explosive hazards awareness / mine risk education
+9. Protection services - family reunification
+10. Protection services - Legal counselling / documentation support
+11. NFI support
+12. Shelter support
+13. Education support
+97. Other
+98. No response
+99. Don't know",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+244,,,,HH survey,Assistance and Protection Mainstreaming,"% of HHs reporting that humanitarian assistance was delivered in a safe, accessible, accountable and participatory manner",0,What was the modality of the assistance?,Select one,"1. In-kind assistance (food, water, NFI, shelter, etc.)
+2. Cash assistance (bank transfer, cash distribution, voucher, mobile transfer, etc.)
+3. Mixed (in-kind AND cash)
+4. Training (livelihood, vocational, etc.)
+97. Other
+",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+245,,,,HH survey,Assistance and Protection Mainstreaming,"% of HHs reporting that humanitarian assistance was delivered in a safe, accessible, accountable and participatory manner",0,Was the aid your household received appropriate to your needs or to the needs of the community?,Select one,"1. Yes
+2. No
+3. NR
+4. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+246,,,,HH survey,Assistance and Protection Mainstreaming,"% of HHs reporting that humanitarian assistance was delivered in a safe, accessible, accountable and participatory manner",aid_satis_workers,Did you feel you were treated with respect by aid workers?,Select one,"1. Yes
+2. No
+3. NR
+4. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+247,,,,HH survey,Assistance and Protection Mainstreaming,"% of HHs reporting that humanitarian assistance was delivered in a safe, accessible, accountable and participatory manner",aid_safe,Did you feel safe while receiving assistance?,Select one,"1. Yes
+2. No
+3. NR
+4. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+248,,,,HH survey,Assistance and Protection Mainstreaming,"% of HHs reporting that humanitarian assistance was delivered in a safe, accessible, accountable and participatory manner",0,Did you feel that any category of people in the household/community was excluded from the assistance?,Select one,"1. Yes
+2. No
+3. NR
+4. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+249,,,,HH survey,Assistance and Protection Mainstreaming,"% of HHs reporting that humanitarian assistance was delivered in a safe, accessible, accountable and participatory manner",0,Who was excluded?,Select multiple,"1. Men
+2. Women
+3. Adolescent boys (12-17 yo)
+4. Adolescent girls (12-17 yo)
+5. Boys (less than 12 yo)
+6. Girls (less than 12 yo)
+7. Elderly men (60+ yo)
+8. Elderly women (60+ yo)
+9. Persons based on their ethnicity/different community origin
+97. Other
+98. No response
+99. Don't know",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+250,,,,HH survey,Assistance and Protection Mainstreaming,"% of HHs reporting that humanitarian assistance was delivered in a safe, accessible, accountable and participatory manner",0,Has your household or anyone in the community ever raised concerns on the assistance received?,Select one,"1. Yes
+2. No
+3. NR
+4. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+251,,,,HH survey,Assistance and Protection Mainstreaming,"% of HHs reporting that humanitarian assistance was delivered in a safe, accessible, accountable and participatory manner",0,"If yes, were you satisfied with the response you or anyone in the community received from aid workers on the concerns?",Select one,"1. Yes, satisfied
+2. Partially satisfied
+3. No satisfied
+4. Never received a response",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+252,,,,HH survey,Assistance and Protection Mainstreaming,"% of HHs reporting that humanitarian assistance was delivered in a safe, accessible, accountable and participatory manner",0,Has your household or have leaders in the community been asked about what assistance you would like to receive?,Select one,"1. Yes
+2. No
+3. NR
+4. DK",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+253,,,,HH survey,Priority needs and last comments,Priorty needs and final comments,need1,What do you think is the main priority need for your household overall?,Select one,"1. No needs
+2. Food
+3. Water
+4. Latrines
+5. Health
+6. Family reunification
+7. Psychosocial support services
+8. Legal documentation
+9. Education/schools
+10. Livelihoods/income
+11. Shelter support
+12. Non-food items
+97. Other
+98. No response
+99. Don't know",HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+254,,,,HH survey,Priority needs and last comments,Priorty needs and final comments,comment,Do you have any final comment on your situation and needs?,Text,text,HH,Stratified cluster sampling,,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA

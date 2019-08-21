@@ -1,0 +1,17 @@
+component_name,weight,condition
+shelter_type_comp,0,!(is.na(type_shelter))
+shelter_type_comp,1,"(type_shelter == ""transitional_shelter"" ) | (type_shelter == ""masonry_building"" & damage_status == ""yes"") | (type_shelter == ""traditional_house"" & damage_status == ""yes"")"
+shelter_type_comp,2,"type_shelter %in% c(""makeshift"" , ""emergency_shelter"" , ""tent"")"
+shelter_type_comp,3,"type_shelter %in% c(""public_building"" , ""open_space"")"
+shelter_occup_comp,2,"occupancy_status == ""hosted_free""  | (occupancy_status == ""rented"" & damage_status == ""yes"")"
+shelter_occup_comp,3,"occupancy_status %in% c(""squatted_w_permission"" , ""squatted_wo_permission"" , ""hosted_free_ext"")"
+shelter_damage_comp,0,!(is.na(damage_status))
+shelter_damage_comp,1,"damage_severity == ""no_little"""
+shelter_damage_comp,2,"damage_severity == ""partially_damaged"""
+shelter_damage_comp,3,"damage_severity == ""completely_destroyed"""
+shelter_crowd_comp,0,number_families_share > 0
+shelter_crowd_comp,3,number_families_share > 1
+shelter_index,1,(shelter_type_comp + shelter_occup_comp + shelter_damage_comp + shelter_crowd_comp) < 3
+shelter_index,2,(shelter_type_comp + shelter_occup_comp + shelter_damage_comp + shelter_crowd_comp) >= 3 & < 6
+shelter_index,3,(shelter_type_comp + shelter_occup_comp + shelter_damage_comp + shelter_crowd_comp) >= 6 & < 9
+shelter_index,4,(shelter_type_comp + shelter_occup_comp + shelter_damage_comp + shelter_crowd_comp) >= 9

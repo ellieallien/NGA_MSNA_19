@@ -1,0 +1,22 @@
+component_name,weight,condition
+fcs_comp,0,!(is.na(fcs_total))
+fcs_comp,2,fcs_total < 38
+fcs_comp,3,fcs_total < 27
+rcsi_comp,0,!(is.na(rcsi_total))
+rcsi_comp,2,rcsi_total >= 10
+firewood_sufficient_comp,0,!(is.na(safe_enough))
+firewood_sufficient_comp,1,"safe_enough == ""no"""
+firewood_source_comp,0,!(is.na(safe_fuel_source))
+firewood_source_comp,1,"safe_fuel_source %in% c(""collect_outside"" , ""trade_for_fuel"" , ""ngo"")"
+market_barrier_comp,0,"rep(T, length(food_barrier_main))"
+market_barrier_comp,1,"sm_selected(food_barrier_main, any = c(""market_far"" , ""transport_expensive"" , ""food_expensive"" , ""food_not_available_market"" , ""market_insecurity"" , ""movement_restrictions""))"
+access_land_comp,0,!(is.na(land_access_need))
+access_land_comp,1,"(land_access_need %in% c(""crops"" , ""grazing"")) & (land_access == ""no"" & main_income %in% c(""agriculture"" , ""livestock""))"
+access_land_comp,0.5,"(land_access_need %in% c(""crops"" , ""grazing"")) & (land_access == ""yes_not_enough"") & (main_income %in% c(""agriculture"" , ""livestock""))"
+access_seeds_inputs_comp,0,!(is.na(agric_inputs))
+access_seeds_inputs_comp,1,"(agric_inputs == ""no"") & (main_income %in% c(""agriculture"" , ""livestock""))"
+access_seeds_inputs_comp,0.5,"(agric_inputs == ""yes_not_enough"") & (main_income %in% c(""agriculture"" , ""livestock""))"
+foodsec_index,1,(fcs_comp + rcsi_comp + firewood_sufficient_comp + firewood_source_comp + market_barrier_comp + access_land_comp + access_seeds_inputs_comp) < 3
+foodsec_index,2,(fcs_comp + rcsi_comp + firewood_sufficient_comp + firewood_source_comp + market_barrier_comp + access_land_comp + access_seeds_inputs_comp) >= 3
+foodsec_index,3,(fcs_comp + rcsi_comp + firewood_sufficient_comp + firewood_source_comp + market_barrier_comp + access_land_comp + access_seeds_inputs_comp) >= 6
+foodsec_index,4,(fcs_comp + rcsi_comp + firewood_sufficient_comp + firewood_source_comp + market_barrier_comp + access_land_comp + access_seeds_inputs_comp) >= 8

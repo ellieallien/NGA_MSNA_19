@@ -1,0 +1,303 @@
+####################################SECTORAL COMPOSITE INDICATORS#################################################
+
+##THESE COMPOSITE INDICATORS ARE SOLELY INCLUSIVE OF THE 1ST PILLAR OF 
+HUMANITARIAN CONDITIONS UNDER THE JOINT INTER-SECTORAL ANALYSIS FRAMEWORK##
+
+
+******************************************* protection_index ****************************************************
+
+##Under the protection sector composite indicator, we will have 3 sub-components, the last 2 are straightforward
+and do not entail a maximum score while the sum of all sub-indicators could reach. However, this is the case for
+the first sub-component, protection_general_comp: although the sum of all sub-indicators could reach 9 points, the
+maximum score for this sub-component is 8.##
+
+**protection_general_comp**
+
+secu_incident_comp == 1 if security_yn == "yes" and security_type == "physical_violence" | "fire" | "destruction_property"
+secu_incident_comp == 2 if security_yn == "yes" and security_type == "abduction_adult" | "abduction_children" | "armed_attack"
+secu_incident_comp == 3 if security_yn == "yes" and security_type == "killing" | "explosives" | "gbv"
+
+documentation_comp == 1 if num_nodocs > 0
+documentation_comp == 2 if birth_cert > 0
+documentation_comp == 3 if num_nodocs > 0 && birth_cert >0
+
+eviction_comp == 1 if eviction_threat == "yes"
+
+restriction_comp == 1 if move_restriction_yn == "restriction_night" | "restriction_large_group" | "restriction_2km" | "restriction_id"
+restriction_comp == 2 if move_restriction_yn == "restriction_complete"
+
+exploitation_comp == 1 if labour_exploitation != "none" | "98" | "99
+
+>>> protection_general_comp == secu_incident_comp + documentation_comp + eviction_comp + restriction_comp + exploitation_comp
+>>> if protection_general_comp => 8, protection_general_comp == 8
+
+
+**protection_child_comp**
+
+missing_comp == 1 if missing_detained_adult > 0 
+missing_comp == 2 if missing_detained_child > 0
+missing_comp == 3 if missing_detained_adult > 0 && missing_detained_child > 0
+
+
+**protection_mhpss_comp**
+
+psycho_distress_comp == 1 if mhpss_needs ==   "reduced_interest" & "feeling_depressed" | "reduced_interest" & "feeling_tired" | "reduced_interest" & "trouble_sleeping" | "reduced_interest" & nervousness" | "reduced_interest" & "afraid" | "reduced_interest" & "angry"
+											| "feeling_depressed" & "feeling_tired" | "feeling_depressed" & "trouble_sleeping" | "feeling_depressed" & "nervousness" | "feeling_depressed" & "afraid" | "feeling_depressed" & "angry"
+											| "feeling_tired" & "trouble_sleeping" | "feeling_tired" & "nervousness" | "feeling_tired" & "afraid" | "feeling_tired" & "angry"
+											| "trouble_sleeping" & "nervousness" | "trouble_sleeping" & "afraid" | "trouble_sleeping" & "angry"
+											| "nervousness" & "afraid" | "nervousness" & "angry"
+											| "afraid" & "angry
+
+
+##FINAL INDEX CALCULATION: For all sectors we have 4 category represented by a scale from 1 to 4, where
+1 is No/Minimal
+2 is Stress
+3 is Severe
+4 is Extreme##
+
+protection_index == 1 if protection_general_comp + protection_child_comp + protection_mhpss_comp < 3
+protection_index == 2 if protection_general_comp + protection_child_comp + protection_mhpss_comp >= 3 && < 6
+protection_index == 3 if protection_general_comp + protection_child_comp + protection_mhpss_comp >= 6 && < 9
+protection_index == 4 if protection_general_comp + protection_child_comp + protection_mhpss_comp >= 9 
+
+
+
+
+**********************************************education_index***************************************************
+
+##Under the education sector composite indicator, we do not have any sub-component - all indicators need to be treated
+equally.##
+
+##This entails aggregating the individual data for each HH, as the indicator for composite is "HH reports attendance rate for all school-aged children"##
+current_attend_comp == 1 if $(formal_schl_stat == "never_formal" | "drop_out_formal") / agegrp_3_18_sum => 70% && < 100%
+current_attend_comp == 2 if $(formal_schl_stat == "never_formal" | "drop_out_formal") / agegrp_3_18_sum => 50% && < 70% 
+current_attend_comp == 3 if $(formal_schl_stat == "never_formal" | "drop_out_formal") / agegrp_3_18_sum => 30% && < 50%
+current_attend_comp == 4 if $(formal_schl_stat == "never_formal" | "drop_out_formal") / agegrp_3_18_sum => 0.1% && < 30%
+current_attend_comp == 5 if $(formal_schl_stat == "never_formal" | "drop_out_formal") / agegrp_3_18_sum == 0%
+current_attend_comp == 0 if $(formal_schl_stat == "never_formal" | "drop_out_formal") / agegrp_3_18_sum == 100% | agegrp_3_18_sum == 0
+
+
+never_attend_comp == 2 if $(formal_schl_stat == "never_formal") > 0
+
+
+barrier_educ_comp == 1 if education_barrier_main == "school_fees" | "out_of_school_long" | "cloth_uniform" | "helping_home"
+													| "begging" | "farming" | "job_hawking" | "disability" | "school_nonfunctional" | "school_far" 
+													| "school_full" | "school_poor_quality" | "school_no_wash" | "lack_teachers"
+													
+
+barrier_educ_comp == 2 if education_barrier_main == "against_formal_edu" | "displacement" | "insecurity_at_school" | "insecurity_on_the_way" | "armed_group_occupy" | "joined_armed_group"
+
+
+barrier_girl_comp == 1 if education_barrier_girls == "marriage" | "pregnancy" | "menstrual cycle"
+
+
+educ_nfi_comp == 1 if needs_items == "school_material"
+
+
+##FINAL INDEX CALCULATION: For all sectors we have 4 category represented by a scale from 1 to 4, where
+1 is No/Minimal
+2 is Stress
+3 is Severe
+4 is Extreme##
+
+education_index == 1 if current_attend_comp + never_attend_comp + barrier_educ_comp + barrier_girl_comp + educ_nfi_comp < 3
+education_index == 2 if current_attend_comp + never_attend_comp + barrier_educ_comp + barrier_girl_comp + educ_nfi_comp >= 3 && < 7
+education_index == 3 if current_attend_comp + never_attend_comp + barrier_educ_comp + barrier_girl_comp + educ_nfi_comp >= 7 && < 9
+education_index == 4 if current_attend_comp + never_attend_comp + barrier_educ_comp + barrier_girl_comp + educ_nfi_comp >= 9
+
+
+
+
+************************************************shelter_index***************************************************
+
+##Under the shelter sector composite indicator, we do not have any sub-component - all indicators need to be treated
+equally.##
+
+shelter_type_comp == 1 if type_shelter == "transitional_shelter" | "masonry_building" AND damage_status == "yes" | "traditional_house" AND damage_status == "yes"
+shelter_type_comp == 2 if type_shelter == " makeshift" | "emergency_shelter" | "tent"
+shelter_type_comp == 3 if type_shelter == "public_building" | "open_space"
+
+
+shelter_occup_comp == 2 if occupancy_status == "hosted_free" | "rented" AND damage_status == "yes"
+shelter_occup_comp == 3 if occupancy_status == "squatted_w_permission" | "squatted_wo_permission" | "hosted_free_ext"
+
+
+shelter_damage_comp == 1 if damage_status == "yes" && damage_severity == "no_little"
+shelter_damage_comp == 2 if damage_status == "yes" && damage_severity == "partially_damaged"
+shelter_damage_comp == 3 if damage_status == "yes" && damage_severity == "completely_destroyed"
+
+
+shelter_crowd_comp == 3 if number_families_share > 1
+
+
+##FINAL INDEX CALCULATION: For all sectors we have 4 category represented by a scale from 1 to 4, where
+1 is No/Minimal
+2 is Stress
+3 is Severe
+4 is Extreme##
+
+
+shelter_index == 1 if shelter_type_comp + shelter_occup_comp + shelter_damage_comp + shelter_crowd_comp < 3
+shelter_index == 2 if shelter_type_comp + shelter_occup_comp + shelter_damage_comp + shelter_crowd_comp >= 3 && < 6
+shelter_index == 3 if shelter_type_comp + shelter_occup_comp + shelter_damage_comp + shelter_crowd_comp >= 6 && < 9
+shelter_index == 4 if shelter_type_comp + shelter_occup_comp + shelter_damage_comp + shelter_crowd_comp > 9
+
+
+
+
+*********************************************earlyrecovery_index************************************************
+
+##Under the ERLS composite indicator, we do not have any sub-component - all indicators need to be treated
+equally.##
+
+main_income_comp == 2 if main_income == "no_income" | "remittance" | "begging"
+
+
+debt_comp == 1 if hh_debt_yn == "yes"
+
+
+cash_access_comp == 2 if cash_access == "no_cash"
+
+
+bank_access_comp == 1 if bank == "yes"
+
+
+waste_coverage_comp == 1 if waste_management == "no"
+
+
+mobile_access_comp == 1 if aid_access_phone == "yes" && aid_access_internet == "yes"
+mobile_access_comp == 0.5 if aid_access_phone == "yes" && aid_access_internet == "no"
+
+
+security_access_comp == 1 if access_gov != "police_yes" | "gov_yes"
+security_access_comp == 2 if access_gov == "both_more_2km"
+
+
+##FINAL INDEX CALCULATION: For all sectors we have 4 category represented by a scale from 1 to 4, where
+1 is No/Minimal
+2 is Stress
+3 is Severe
+4 is Extreme##
+
+earlyrecovery_index == 1 if main_income_comp + debt_comp + cash_access_comp + bank_access_comp + waste_coverage_comp + mobile_access_comp + security_access_comp < 3
+earlyrecovery_index == 2 if main_income_comp + debt_comp + cash_access_comp + bank_access_comp + waste_coverage_comp + mobile_access_comp + security_access_comp >= 3 && < 6
+earlyrecovery_index == 3 if main_income_comp + debt_comp + cash_access_comp + bank_access_comp + waste_coverage_comp + mobile_access_comp + security_access_comp >= 6 && < 8
+earlyrecovery_index == 4 if main_income_comp + debt_comp + cash_access_comp + bank_access_comp + waste_coverage_comp + mobile_access_comp + security_access_comp > 8
+
+
+
+
+****************************************************wash_index***************************************************
+
+##Under the WASH composite indicator, we do not have any sub-component - all indicators need to be treated
+equally.##
+
+improved_water_comp == 3 if water_source_main != "borehole" | "public_tap" | "piped" | "handpump" | "sealed_well" | "protected_spring"
+
+
+##This entails aggregating the water loop data for each HH, as the indicator for composite is "HH water consumption is less than 15/7.5 L/p/d"##
+water_consumption_comp == 2 if (sum(volume_ct * num_filled_ct)) / num_hh > 7.5 && <= 15 
+water_consumption_comp == 3 if (sum(volume_ct * num_filled_ct)) / num_hh <= 7.5
+
+
+latrine_access_comp == 3 if adult_defecate == "open_space" | child_defecate == "open_space"
+
+
+water_collect_comp == 1 if water_time == "30min_1h" | "1_2h" | "2h_more"
+
+
+wash_hands_comp == 2 if wash_hands == "ash"
+wash_hands_comp == 3 if wash_hands == "sand" | "water_only" | "dont_wash_hand"
+
+
+##FINAL INDEX CALCULATION: For all sectors we have 4 category represented by a scale from 1 to 4, where
+1 is No/Minimal
+2 is Stress
+3 is Severe
+4 is Extreme##
+
+wash_index == 1 if improved_water_comp + water_consumption_comp + latrine_access_comp + water_collect_comp + wash_hands_comp < 3
+wash_index == 2 if improved_water_comp + water_consumption_comp + latrine_access_comp + water_collect_comp + wash_hands_comp >= 3 && < 7
+wash_index == 3 if improved_water_comp + water_consumption_comp + latrine_access_comp + water_collect_comp + wash_hands_comp >= 7 && < 10
+wash_index == 4 if improved_water_comp + water_consumption_comp + latrine_access_comp + water_collect_comp + wash_hands_comp > 10
+
+
+
+
+**************************************************foodsec_index**************************************************
+
+##Under the FSL (Food Sec, SAFE, Agriculture) composite indicator, we do not have any sub-component - all indicators need to be treated
+equally.##
+##Ensure we already have in our clean dataset the composite calculation of FCS and rCSI##
+
+fcs_comp == 2 if fcs_total < 27
+fcs_comp == 3 if fcs_total >= 27 && <= 38
+
+
+rcsi_comp == 2 if rcsi_total >= 10
+
+
+firewood_sufficient_comp == 1 if safe_enough == "no"
+
+
+firewood_source_comp == 1 if safe_fuel_source == "collect_outside" | "trade_for_fuel" | "ngo"
+
+
+market_barrier_comp == 1 if food_barrier_main == "market_far" | "transport_expensive" | "food_expensive" | "food_not_available_market" | "market_insecurity" | "movement_restrictions"
+
+
+access_land_comp == 1 if land_access_need == "crops" OR "grazing" && land_access == "no" && main_income == "agriculture" | "livestock"
+access_land_comp == 0.5 if land_access_need == "crops" OR "grazing" && land_access == "yes_not_enough" && main_income == "agriculture" | "livestock"
+
+
+access_seeds_inputs_comp == 1 if agric_inputs == "no" && main_income == "agriculture" | "livestock"
+access_seeds_inputs_comp == 0.5 if agric_inputs == "yes_not_enough" && main_income == "agriculture" | "livestock"
+
+
+##FINAL INDEX CALCULATION: For all sectors we have 4 category represented by a scale from 1 to 4, where
+1 is No/Minimal
+2 is Stress
+3 is Severe
+4 is Extreme##
+
+foodsec_index == 1 if fcs_comp + rcsi_comp + firewood_sufficient_comp + firewood_source_comp + market_barrier_comp + access_land_comp + access_seeds_inputs_comp < 3
+foodsec_index == 2 if fcs_comp + rcsi_comp + firewood_sufficient_comp + firewood_source_comp + market_barrier_comp + access_land_comp + access_seeds_inputs_comp >= 3 && < 6
+foodsec_index == 3 if fcs_comp + rcsi_comp + firewood_sufficient_comp + firewood_source_comp + market_barrier_comp + access_land_comp + access_seeds_inputs_comp >= 6 && < 8
+foodsec_index == 4 if fcs_comp + rcsi_comp + firewood_sufficient_comp + firewood_source_comp + market_barrier_comp + access_land_comp + access_seeds_inputs_comp > 8
+
+
+
+
+**************************************************health_index***************************************************
+
+##Under the Health composite indicator, we do not have any sub-component - all indicators need to be treated
+equally.##
+
+barrier_health_comp == 1 if main_health_barrier != "no_barrier" | 98 | 99
+barrier_health_comp == 2 if main_health_barrier == ANY 2 or more options
+
+
+##This entails aggregating the individual data for each HH, as the indicator for composite is "HH reports at least 1 child with no vaccination"##
+no_vaccine_comp == 2 if measles == "no" && penta == "no" && polio == "no"
+
+
+illness_comp == 1 if sick_2weeks == "yes"
+illness_comp == 2 if sick_2weeks == "yes" && sick_illness == "malaria" | "measles" | "cholera"
+
+
+distance_health_comp == 2 if distance_hf == "2_5km" | "more_than_5km"
+
+
+birth_attend_comp == 1 if birth_lastyear == "yes"
+birth_attend_comp == 2 if birth_who != "skilled_birthattendant"
+
+##FINAL INDEX CALCULATION: For all sectors we have 4 category represented by a scale from 1 to 4, where
+1 is No/Minimal
+2 is Stress
+3 is Severe
+4 is Extreme##
+
+health_index == 1 if barrier_health_comp + no_vaccine_comp + illness_comp + distance_health_comp + birth_attend_comp < 3
+health_index == 2 if barrier_health_comp + no_vaccine_comp + illness_comp + distance_health_comp + birth_attend_comp >= 3 && < 6
+health_index == 3 if barrier_health_comp + no_vaccine_comp + illness_comp + distance_health_comp + birth_attend_comp >= 6 && < 8
+health_index == 4 if barrier_health_comp + no_vaccine_comp + illness_comp + distance_health_comp + birth_attend_comp > 8

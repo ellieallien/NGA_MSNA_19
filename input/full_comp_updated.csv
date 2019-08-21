@@ -1,0 +1,188 @@
+component_name,weight,condition
+secu_incident_comp,0,!(is.na(security_type))
+secu_incident_comp,1,"sm_selected(security_type, any=c(""physical_violence"" , ""fire"" ,""destruction_property""))"
+secu_incident_comp,2,"sm_selected(security_type, any=c(""abduction_adult"" , ""abduction_children"" , ""armed_attack""))"
+secu_incident_comp,3,"sm_selected(security_type, any=c(""killing"" ,""explosives"" ,""gbv""))"
+documentation_comp,0,num_nodocs == 0 
+documentation_comp,0.5,num_nodocs > 0
+documentation_comp,1,birth_cert > 0
+documentation_comp,1.5,num_nodocs & birth_cert > 0
+eviction_comp,0,"!(eviction_threat %in% ""yes"") "
+eviction_comp,0.5,"eviction_threat == ""yes"""
+restriction_comp,0,!(is.na(move_restriction_yn))
+restriction_comp,1,"move_restriction_yn %in% c(""restriction_night"" , ""restriction_large_group"" , ""restriction_2km"" ,""restriction_id"")"
+restriction_comp,2,"move_restriction_yn == ""restriction_complete"""
+exploitation_comp,0,"labour_exploitation %in% c(""none"" , ""98"" , ""99"")"
+exploitation_comp,1,"!(labour_exploitation %in% c(""none"" , ""98"" , ""99""))"
+missing_comp,0,"missing_detained_adult == ""no"" & missing_detained_child == ""no"" "
+missing_comp,1,"missing_detained_adult == ""yes"""
+missing_comp,2,"missing_detained_child == ""yes"""
+missing_comp,3,"missing_detained_adult == ""yes"" & missing_detained_child == ""yes"""
+psycho_distress_comp,0,!(is.na(mhpss_needs))
+psycho_distress_comp,1,"mhpss_needs %>% strsplit("" "") %>% lapply(function(x){(x %in% c(""reduced_interest"", ""feeling_depressed"", ""feeling_tired"", ""trouble_sleeping"", ""nervousness"", ""afraid"",""angry"") %>% sum) > 1}) %>% unlist"
+protection_index,1,(secu_incident_comp + documentation_comp + eviction_comp + restriction_comp + exploitation_comp + missing_comp + psycho_distress_comp) < 3
+protection_index,2,(secu_incident_comp + documentation_comp + eviction_comp + restriction_comp + exploitation_comp + missing_comp + psycho_distress_comp) >= 3
+protection_index,3,(secu_incident_comp + documentation_comp + eviction_comp + restriction_comp + exploitation_comp + missing_comp + psycho_distress_comp) >= 6
+protection_index,4,(secu_incident_comp + documentation_comp + eviction_comp + restriction_comp + exploitation_comp + missing_comp + psycho_distress_comp) >= 9
+current_attend_comp,1,(children_out_formal / agegrp_3_18_sum)  > 0
+current_attend_comp,2,(children_out_formal / agegrp_3_18_sum)  > 0.3
+current_attend_comp,3,(children_out_formal / agegrp_3_18_sum)  > 0.5
+current_attend_comp,4,(children_out_formal / agegrp_3_18_sum)  > 0.7
+current_attend_comp,5,(children_out_formal / agegrp_3_18_sum)  == 1
+never_attend_comp,0,children_never_formal == 0 
+never_attend_comp,2,children_never_formal > 0 
+barrier_educ_comp,0,!(is.na(education_barrier_main))
+barrier_educ_comp,1,"education_barrier_main %in%  c(""school_fees"", ""out_of_school_long"", ""cloth_uniform"" , ""helping_home"" , ""begging"" , ""farming"" , ""job_hawking"" , ""disability"" , ""school_nonfunctional"" , ""school_far"" , ""school_full"" , ""school_poor_quality"" , ""school_no_wash"" , ""lack_teachers"")"
+barrier_educ_comp,2,"education_barrier_main %in% c(""against_formal_edu"" , ""displacement"" , ""insecurity_at_school"" , ""insecurity_on_the_way"" , ""armed_group_occupy"" , ""joined_armed_group"")"
+barrier_girl_comp,0,"rep(T, length(education_barrier_girls)) "
+barrier_girl_comp,1,"education_barrier_girls %in% c( ""marriage"" , ""pregnancy"" , ""menstrual cycle"")"
+educ_nfi_comp,0,"rep(T, length(needs_items)) "
+educ_nfi_comp,1,"sm_selected(needs_items, any = c(""school_material""))"
+education_index,1,(current_attend_comp + never_attend_comp + barrier_educ_comp + barrier_girl_comp + educ_nfi_comp) < 3
+education_index,2,(current_attend_comp + never_attend_comp + barrier_educ_comp + barrier_girl_comp + educ_nfi_comp) >= 3 
+education_index,3,(current_attend_comp + never_attend_comp + barrier_educ_comp + barrier_girl_comp + educ_nfi_comp) >= 7 
+education_index,4,(current_attend_comp + never_attend_comp + barrier_educ_comp + barrier_girl_comp + educ_nfi_comp) >= 9
+shelter_type_comp,0,!(is.na(type_shelter))
+shelter_type_comp,1,"(type_shelter == ""transitional_shelter"" ) | (type_shelter == ""masonry_building"" & damage_status == ""yes"") | (type_shelter == ""traditional_house"" & damage_status == ""yes"")"
+shelter_type_comp,2,"type_shelter %in% c(""makeshift"" , ""emergency_shelter"" , ""tent"")"
+shelter_type_comp,3,"type_shelter %in% c(""public_building"" , ""open_space"")"
+shelter_occup_comp,0,!(is.na(occupancy_status))
+shelter_occup_comp,2,"occupancy_status == ""hosted_free""  | (occupancy_status == ""rented"" & damage_status == ""yes"")"
+shelter_occup_comp,3,"occupancy_status %in% c(""squatted_w_permission"" , ""squatted_wo_permission"" , ""hosted_free_ext"")"
+shelter_damage_comp,0,!(is.na(damage_status))
+shelter_damage_comp,1,"damage_severity == ""no_little"""
+shelter_damage_comp,2,"damage_severity == ""partially_damaged"""
+shelter_damage_comp,3,"damage_severity == ""completely_destroyed"""
+shelter_crowd_comp,0,number_families_share > 0
+shelter_crowd_comp,3,number_families_share > 1
+shelter_index,1,(shelter_type_comp + shelter_occup_comp + shelter_damage_comp + shelter_crowd_comp) < 3
+shelter_index,2,(shelter_type_comp + shelter_occup_comp + shelter_damage_comp + shelter_crowd_comp) >= 3 
+shelter_index,3,(shelter_type_comp + shelter_occup_comp + shelter_damage_comp + shelter_crowd_comp) >= 6 
+shelter_index,4,(shelter_type_comp + shelter_occup_comp + shelter_damage_comp + shelter_crowd_comp) >= 9
+main_income_comp,0,!(is.na(main_income))
+main_income_comp,2,"sm_selected(main_income, any = c(""no_income"" , ""remittance"" , ""begging""))"
+debt_comp,0,!(is.na(hh_debt_yn))
+debt_comp,1,"hh_debt_yn == ""yes"""
+cash_access_comp,0,!(is.na(cash_access))
+cash_access_comp,2,"cash_access == ""no_cash"""
+bank_access_comp,0,!(is.na(bank))
+bank_access_comp,1,"bank == ""no"""
+waste_coverage_comp,0,!(is.na(waste_management))
+waste_coverage_comp,1,"waste_management == ""no"""
+mobile_access_comp,0,!(is.na(aid_access_phone))
+mobile_access_comp,1,"aid_access_phone == ""no"""
+mobile_access_comp,0.5,"aid_access_phone == ""yes"" & aid_access_internet == ""no"""
+security_access_comp,0,!(is.na(access_gov))
+security_access_comp,1,"access_gov %in% c(""police_yes"" , ""gov_yes"")"
+security_access_comp,2,"access_gov == ""both_more_2km"""
+earlyrecovery_index,1,(main_income_comp + debt_comp + cash_access_comp + bank_access_comp + waste_coverage_comp + mobile_access_comp + security_access_comp) < 3
+earlyrecovery_index,2,(main_income_comp + debt_comp + cash_access_comp + bank_access_comp + waste_coverage_comp + mobile_access_comp + security_access_comp) >=3
+earlyrecovery_index,3,(main_income_comp + debt_comp + cash_access_comp + bank_access_comp + waste_coverage_comp + mobile_access_comp + security_access_comp) >= 6
+earlyrecovery_index,4,(main_income_comp + debt_comp + cash_access_comp + bank_access_comp + waste_coverage_comp + mobile_access_comp + security_access_comp) >= 8
+improved_water_comp,0,"water_source_main %in% c(""borehole"" , ""public_tap"" , ""piped"" , ""handpump"" , ""sealed_well"" , ""protected_spring"")"
+improved_water_comp,3,"!(water_source_main %in% c(""borehole"" , ""public_tap"" , ""piped"" , ""handpump"" , ""sealed_well"" , ""protected_spring""))"
+water_consumption_comp,0,!is.na(water_consumption_total)
+water_consumption_comp,2,water_consumption_total < 15
+water_consumption_comp,3,water_consumption_total  < 7.5
+latrine_access_comp,0,!(is.na(adult_defecate))
+latrine_access_comp,3,"adult_defecate %in% c(""open_space"" , child_defecate == ""open_space"")"
+water_collect_comp,0,!(is.na(water_time))
+water_collect_comp,1,"water_time %in% c(""30min_1h"" , ""1_2h"" , ""2h_more"")"
+wash_hands_comp,0,!(is.na(wash_hand))
+wash_hands_comp,2,"wash_hand == ""ash"""
+wash_hands_comp,3,"wash_hand %in% c(""sand"" , ""water_only"" , ""dont_wash_hand"")"
+wash_index,1,(improved_water_comp + water_consumption_comp + latrine_access_comp + water_collect_comp + wash_hands_comp) < 3
+wash_index,2,(improved_water_comp + water_consumption_comp + latrine_access_comp + water_collect_comp + wash_hands_comp) >= 3
+wash_index,3,(improved_water_comp + water_consumption_comp + latrine_access_comp + water_collect_comp + wash_hands_comp) >= 7
+wash_index,4,(improved_water_comp + water_consumption_comp + latrine_access_comp + water_collect_comp + wash_hands_comp) >= 10
+fcs_comp,0,!(is.na(fcs_total))
+fcs_comp,2,fcs_total < 38
+fcs_comp,3,fcs_total < 27
+rcsi_comp,0,!(is.na(rcsi_total))
+rcsi_comp,2,rcsi_total >= 10
+firewood_sufficient_comp,0,!(is.na(safe_enough))
+firewood_sufficient_comp,1,"safe_enough == ""no"""
+firewood_source_comp,0,!(is.na(safe_fuel_source))
+firewood_source_comp,1,"safe_fuel_source %in% c(""collect_outside"" , ""trade_for_fuel"" , ""ngo"")"
+market_barrier_comp,0,"rep(T, length(food_barrier_main))"
+market_barrier_comp,1,"sm_selected(food_barrier_main, any = c(""market_far"" , ""transport_expensive"" , ""food_expensive"" , ""food_not_available_market"" , ""market_insecurity"" , ""movement_restrictions""))"
+access_land_comp,0,!(is.na(land_access_need))
+access_land_comp,1,"(land_access_need %in% c(""crops"" , ""grazing"")) & (land_access == ""no"" & main_income %in% c(""agriculture"" , ""livestock""))"
+access_land_comp,0.5,"(land_access_need %in% c(""crops"" , ""grazing"")) & (land_access == ""yes_not_enough"") & (main_income %in% c(""agriculture"" , ""livestock""))"
+access_seeds_inputs_comp,0,!(is.na(agric_inputs))
+access_seeds_inputs_comp,1,"(agric_inputs == ""no"") & (main_income %in% c(""agriculture"" , ""livestock""))"
+access_seeds_inputs_comp,0.5,"(agric_inputs == ""yes_not_enough"") & (main_income %in% c(""agriculture"" , ""livestock""))"
+foodsec_index,1,(fcs_comp + rcsi_comp + firewood_sufficient_comp + firewood_source_comp + market_barrier_comp + access_land_comp + access_seeds_inputs_comp) < 3
+foodsec_index,2,(fcs_comp + rcsi_comp + firewood_sufficient_comp + firewood_source_comp + market_barrier_comp + access_land_comp + access_seeds_inputs_comp) >= 3
+foodsec_index,3,(fcs_comp + rcsi_comp + firewood_sufficient_comp + firewood_source_comp + market_barrier_comp + access_land_comp + access_seeds_inputs_comp) >= 6
+foodsec_index,4,(fcs_comp + rcsi_comp + firewood_sufficient_comp + firewood_source_comp + market_barrier_comp + access_land_comp + access_seeds_inputs_comp) >= 8
+barrier_health_comp,0,"main_barrier_health %in% c(""no_barrier"" , 98 , 99)"
+barrier_health_comp,1,"!(main_barrier_health %in% c(""no_barrier"" , 98 , 99))"
+barrier_health_comp,2,"main_barrier_health %>% strsplit("" "") %>% lapply(function(x){((!(x %in% c(""no_barrier"", 98, 99))) %>% sum) > 1}) %>% unlist"
+no_vaccine_comp,0,!(is.na(no_vaccine))
+no_vaccine_comp,2,no_vaccine > 0
+illness_comp,0,!(is.na(sick_2weeks))
+illness_comp,1,"sick_2weeks == ""yes"""
+illness_comp,2,"sm_selected(sick_illness, any =  c(""malaria"" , ""measles"" , ""cholera""))"
+distance_health_comp,0,!(is.na(distance_hf ))
+distance_health_comp,2,"distance_hf %in% c(""2_5km"" , ""more_than_5km"")"
+birth_attend_comp,0,!(is.na(birth_lastyear))
+birth_attend_comp,1,"birth_lastyear == ""yes"""
+birth_attend_comp,2,"!(is.na(birth_who)) & !(birth_who == ""skilled_birthattendant"")"
+health_index,1,(barrier_health_comp + no_vaccine_comp + illness_comp + distance_health_comp + birth_attend_comp) < 3
+health_index,2,(barrier_health_comp + no_vaccine_comp + illness_comp + distance_health_comp + birth_attend_comp) >= 3 
+health_index,3,(barrier_health_comp + no_vaccine_comp + illness_comp + distance_health_comp + birth_attend_comp) >= 6 
+health_index,4,(barrier_health_comp + no_vaccine_comp + illness_comp + distance_health_comp + birth_attend_comp) >= 8
+ch_phase_comp,0,!(is.na(lga))
+ch_phase_comp,0.5,"lga %in%c(""NG002010"" , ""NG002013"" , ""NG008002"" , ""NG008003"" , ""NG008007"" , ""NG008008"" , ""NG008009"" , ""NG008011"" , ""NG008013"" , ""NG008014"" , ""NG008016"" , ""NG008019"" , ""NG008020"" , ""NG008021"" , ""NG008023"" , ""NG008024"" , ""NG008025"" , ""NG036002"" , ""NG036003"" , ""NG036004"" , ""NG036005"" , ""NG036007"" , ""NG036008"" , ""NG036011"" , ""NG036012"" , ""NG036015"" , ""NG036016"")"
+ch_phase_comp,1,"lga == ""NG008015"""
+isolated_comp,0,num_hh > 1
+isolated_comp,0.5,num_hh == 1
+female_headed_comp,0,"real_sex_hoh == ""male"""
+female_headed_comp,2,"real_sex_hoh == ""female"""
+dependency_ratio_comp,0,(dependents/independents) >= 0 
+dependency_ratio_comp,2,(dependents/independents) >=0.75
+child_headed_comp,0,"rep(T, length(lga))"
+child_headed_comp,2,vulnerability_hh_child_hoh > 0
+plw_comp,0,"rep(T, length(lga))"
+plw_comp,1,(vulnerability_hh_pregnant > 0) | (vulnerability_hh_breastfeeding >0)
+ill_disabled_comp,0,"rep(T, length(lga))"
+ill_disabled_comp,1,(vulnerability_hh_chronically_ill >  0)| (vulnerability_hh_mentally_disabled > 0) | (vulnerability_hh_physically_disabled > 0)
+vulnerability_index,0,"rep(T, length(lga))"
+vulnerability_index,1,(isolated_comp + female_headed_comp + dependency_ratio_comp + child_headed_comp + plw_comp + ill_disabled_comp + ch_phase_comp) >= 4
+health_coping_comp,0,!(is.na(wouldseek_treatment))
+health_coping_comp,2,"wouldseek_treatment == ""wouldnt_seek"""
+water_coping_comp,0,!(is.na(coping_water ))
+water_coping_comp,2,"coping_water  %>% strsplit("" "") %>% lapply(function(x){((x %in% c(""reduce_drinking"" , ""reduce_washing_bathing"", ""fetch_further"",  ""spend_money"", ""buy_on_credit"" , ""drink_cleaning"")) %>% sum) > 1}) %>% unlist"
+livelihood_coping_comp,0,"rep(T, length(f_livelihood_coping_sell_productive_assets))"
+livelihood_coping_comp,2,"(f_livelihood_coping_sell_productive_assets %in% c(""yes"" , ""exhausted"") & f_livelihood_coping_withdraw %in% c(""yes"" , ""exhausted"")) | (f_livelihood_coping_sell_productive_assets %in% c(""yes"" , ""exhausted"") & f_livelihood_coping_reduceexpense %in% c(""yes"" , ""exhausted"")) |(f_livelihood_coping_sell_productive_assets %in% c(""yes"" , ""exhausted"") & f_livelihood_coping_harvest_immature %in% c(""yes"" , ""exhausted"")) | (f_livelihood_coping_sell_productive_assets %in% c(""yes"" , ""exhausted"") & f_livelihood_coping_consume_seeds %in% c(""yes"" , ""exhausted"")) |(f_livelihood_coping_sell_productive_assets %in% c(""yes"" , ""exhausted"") & f_livelihood_coping_decreaseexpense_animalcare_fertilizer %in% c(""yes"" , ""exhausted"")) | (f_livelihood_coping_withdraw %in% c(""yes"" , ""exhausted"") & f_livelihood_coping_reduceexpense %in% c(""yes"" , ""exhausted"")) | (f_livelihood_coping_withdraw %in% c(""yes"" , ""exhausted"") & f_livelihood_coping_harvest_immature %in% c(""yes"" , ""exhausted"")) | (f_livelihood_coping_withdraw %in% c(""yes"" , ""exhausted"") & f_livelihood_coping_consume_seeds %in% c(""yes"" , ""exhausted"")) | (f_livelihood_coping_withdraw %in% c(""yes"" , ""exhausted"") & f_livelihood_coping_decreaseexpense_animalcare_fertilizer %in% c(""yes"" , ""exhausted"")) "
+livelihood_coping_comp,2,"(f_livelihood_coping_reduceexpense %in% c(""yes"" , ""exhausted"") & f_livelihood_coping_harvest_immature %in% c(""yes"" , ""exhausted"")) | (f_livelihood_coping_reduceexpense %in% c(""yes"" , ""exhausted"") & f_livelihood_coping_consume_seeds %in% c(""yes"" , ""exhausted"")) | (f_livelihood_coping_reduceexpense %in% c(""yes"" , ""exhausted"") & f_livelihood_coping_decreaseexpense_animalcare_fertilizer %in% c(""yes"" , ""exhausted"")) | (f_livelihood_coping_harvest_immature %in% c(""yes"" , ""exhausted"") & f_livelihood_coping_consume_seeds %in% c(""yes"" , ""exhausted"")) | (f_livelihood_coping_harvest_immature %in% c(""yes"" , ""exhausted"") & f_livelihood_coping_decreaseexpense_animalcare_fertilizer %in% c(""yes"" , ""exhausted"")) | (f_livelihood_coping_consume_seeds %in% c(""yes"" , ""exhausted"") & f_livelihood_coping_decreaseexpense_animalcare_fertilizer %in% c(""yes"" , ""exhausted""))"
+livelihood_coping_comp,3,"(f_livelihood_coping_sell_land_property %in% c(""yes"" , ""exhausted""))| f_livelihood_coping_beg %in% c(""yes"" , ""exhausted"") | (f_livelihood_coping_dangerous %in% c(""yes"" , ""exhausted""))| (f_livelihood_coping_sell_female %in% c(""yes"" , ""exhausted"")) | (f_livelihood_coping_child_marriage %in% c(""yes"" , ""exhausted""))"
+fuel_coping_comp,0,!(is.na(safe_coping_main))
+fuel_coping_comp,2,"safe_coping_main  %>% strsplit("" "") %>% lapply(function(x){((x %in% c (""reduce_number_meals"", ""sell_food_rations"",  ""undercook"", ""raw_food"",  ""less_preferred_fuel"",  ""communal_cooking"")) %>% sum) > 1}) %>% unlist"
+nfi_comp,0,needs_items >= 0
+nfi_comp,0.5,needs_items >= 6
+nfi_comp,1,needs_items >= 10
+coping_gap_index,1,(health_coping_comp + water_coping_comp + livelihood_coping_comp + rcsi_comp + fuel_coping_comp + nfi_comp) < 3
+coping_gap_index,2,(health_coping_comp + water_coping_comp + livelihood_coping_comp + rcsi_comp + fuel_coping_comp + nfi_comp) >= 3 
+coping_gap_index,3,(health_coping_comp + water_coping_comp + livelihood_coping_comp + rcsi_comp + fuel_coping_comp + nfi_comp) >= 6 
+coping_gap_index,4,(health_coping_comp + water_coping_comp + livelihood_coping_comp + rcsi_comp + fuel_coping_comp + nfi_comp) >= 9
+people_displacement_comp,0,"rep(T, length(group))"
+people_displacement_comp,1.5,"group == ""idp"""
+people_displacement_comp,3,"group == ""idp"" & access_aoo == ""no"""
+people_restriction_comp,0,"rep(T, length(move_restriction_yn))"
+people_restriction_comp,1.5,"move_restriction_yn %in% c(""restriction_night"" , ""restriction_large_group"" , ""restriction_2km"" , ""restriction_id"" , ""restriction_complete"")"
+services_facilities_comp,0,"rep(T, length(lga))"
+services_facilities_comp,1.5,"lga %in% c(""NG002001"", ""NG002010"", ""NG008003"", ""NG008015"", ""NG008019"", ""NG036001"", ""NG036003"", ""NG036007"", ""NG008020"")"
+services_comms_comp,0,!(is.na(group))
+services_comms_comp,1,"(aid_access_phone == ""no"") | (aid_access_phone == ""yes"" & aid_access_internet == ""no"")"
+access_assistance_comp,0,"rep(T, length(lga))"
+access_assistance_comp,2,"lga %in% c(""NG008016"" , ""NG008027"" , ""NG036012"")"
+access_route_comp,0,"rep(T, length(lga))"
+access_route_comp,1.5,"lga %in% c(""NG002003"" , ""NG002008"" , ""NG002012"")"
+access_uxo_comp,0,"rep(T, length(lga))"
+access_uxo_comp,1.5,"lga %in% c(""NG002003"" , ""NG002008"" , ""NG002012"" , ""NG002018"" , ""NG002019"" , ""NG002020"" , ""NG002021"" , ""NG008014"" , ""NG008015"" , ""NG008018"" , ""NG008021"" , ""NG008027"" , ""NG036001"" , ""NG036004"" , ""NG036011"" , ""NG036012"" , ""NG036015"" , ""NG036017"")"
+impact_index,1,(people_displacement_comp + people_restriction_comp + services_facilities_comp + services_comms_comp + access_assistance_comp + access_route_comp + access_uxo_comp) < 3
+impact_index,2,(people_displacement_comp + people_restriction_comp + services_facilities_comp + services_comms_comp + access_assistance_comp + access_route_comp + access_uxo_comp) >= 3 
+impact_index,3,(people_displacement_comp + people_restriction_comp + services_facilities_comp + services_comms_comp + access_assistance_comp + access_route_comp + access_uxo_comp) >= 6
+impact_index,4,(people_displacement_comp + people_restriction_comp + services_facilities_comp + services_comms_comp + access_assistance_comp + access_route_comp + access_uxo_comp) >= 9

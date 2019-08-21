@@ -1,0 +1,17 @@
+component_name,weight,condition
+ch_phase_comp,0,!(is.na(lga))
+ch_phase_comp,0.5,"lga %in%c(""NG002010"" , ""NG002013"" , ""NG008002"" , ""NG008003"" , ""NG008007"" , ""NG008008"" , ""NG008009"" , ""NG008011"" , ""NG008013"" , ""NG008014"" , ""NG008016"" , ""NG008019"" , ""NG008020"" , ""NG008021"" , ""NG008023"" , ""NG008024"" , ""NG008025"" , ""NG036002"" , ""NG036003"" , ""NG036004"" , ""NG036005"" , ""NG036007"" , ""NG036008"" , ""NG036011"" , ""NG036012"" , ""NG036015"" , ""NG036016"")"
+ch_phase_comp,1,"lga == ""NG008015"""
+isolated_comp,0,num_hh > 1
+isolated_comp,0.5,num_hh == 1
+female_headed_comp,2,"gender_hoh == ""male"""
+female_headed_comp,2,"gender_hoh == ""female"""
+dependency_ratio_comp,0,(dependent/non_dependent) >= 0 
+dependency_ratio_comp,2,(dependent/non_dependent) >=0.75
+child_headed_comp,0,!(is.na(vulnerability_hh))
+child_headed_comp,2,"vulnerability_hh == ""child_hoh"""
+plw_comp,0,!(is.na(vulnerability_hh))
+plw_comp,1,"vulnerability_hh %in% c(""pregnant"" , ""breastfeeding"")"
+ill_disabled_comp,0,!(is.na(vulnerability_hh))
+ill_disabled_comp,1,"vulnerability_hh == ""chronicly_ill"" , ""mentally_disabled"" , ""physically_disabled"""
+vulnerability_index,1,(isolated_comp + female_headed_comp + dependency_ratio_comp + child_headed_comp + plw_comp + ill_disabled_comp + ch_phase_comp) >= 4
