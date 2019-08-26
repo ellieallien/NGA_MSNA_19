@@ -4,9 +4,10 @@ rm(list = ls())
 
 setwd("C:/Users/Eliora Henzler/Documents/GitHub/NGA_msna_2019/")
 
-final <- read.csv("./input/final_recoding.csv", stringsAsFactors = F)
+final <- read.csv("./input/final_with_vuln_changed.csv", stringsAsFactors = F)
 
-devtools::install_github("mabafaba/hypegrammaR")
+options(download.file.method = 'libcurl')
+devtools::install_github("mabafaba/hypegrammaR", ref = "use_srvyr", force = T)
 
 library(dplyr)
 library(koboquest) # manage kobo questionnairs
@@ -68,7 +69,7 @@ design <- map_to_design(data =final, cluster_variable_name = "cluster", weightin
 
 # 04 Getting ready for analysis
 
-final <- final[,-1] # remove an evil little variable that is giving me trouble
+final <- final[,-c(1:2)] # remove an evil little variable that is giving me trouble
 
 final$vulnerability_index %<>% as.character
 
@@ -176,8 +177,18 @@ results_lga %<>% map_to_labeled
 map_to_master_table(results_$results, "./output/results_lga_no_disag.csv")
 ### Now we're doing this for the composite indicators
 
-analysisplan_comps_lga <- cbind("none", "none", "lga", NA, NA, c("coping_gap_index", "protection_index", "education_index", "shelter_index", "earlyrecovery_index", "wash_index", "foodsec_index", "health_index", "vulnerability_index", "impact_index", "msni_nga"),
+analysisplan_msni_lga <- cbind("none", "none", "lga", NA, NA, "msni_nga",
                                 "categorical", "direct_reporting") %>% as.data.frame(stringsAsFactors = F)
+
+
+analysisplan_msni_state<- cbind("none", "none", "lga", NA, NA, "msni_nga",
+                               "categorical", "direct_reporting") %>% as.data.frame(stringsAsFactors = F)
+
+
+
+analysisplan_comps_lga <- cbind("none", "none", "lga", NA, NA,  c("coping_gap_index", "protection_index", "education_index", "shelter_index", "earlyrecovery_index", "wash_index", "foodsec_index", "health_index", "vulnerability_index", "impact_index", "msni_nga"),
+                                "categorical", "direct_reporting") %>% as.data.frame(stringsAsFactors = F)
+
 
 analysisplan_comps_state <- cbind("none", "none", "state", NA, NA, c("coping_gap_index", "protection_index", "education_index", "shelter_index", "earlyrecovery_index", "wash_index", "foodsec_index", "health_index", "vulnerability_index", "impact_index", "msni_nga"),
                                 "categorical", "direct_reporting") %>% as.data.frame(stringsAsFactors = F)

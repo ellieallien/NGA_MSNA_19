@@ -1,4 +1,4 @@
-containers <- read.csv("./GitHub/NGA_msna_2019/input/containers.csv", stringsAsFactors = F)
+containers <- read.csv("./input/containers.csv", stringsAsFactors = F)
 response <- read.csv("./GitHub/NGA_msna_2019/input/hh_total.csv", stringsAsFactors = FALSE)
 hh_member <- read.csv("./GitHub/NGA_msna_2019/input/hh_members.csv", 
                       stringsAsFactors = F)

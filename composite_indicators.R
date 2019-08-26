@@ -2,6 +2,7 @@ library(composr)
 library(naniar)
 
 recoding_rules <- read.csv("./input/full_comp_updated.csv", stringsAsFactors = F)
+final <- read.csv("./input/final_NGA_with_loops.csv", stringsAsFactors = F)
 # 
 # hh_merged %>% 
 #   mutate_all(list(str_replace(., "na", NA)))
@@ -51,6 +52,19 @@ final$water_consumption_total %>% is.na %>% sum
 final$water_consumption_comp %>% is.na %>% sum
 final$wash_index %>% is.na %>% sum
 
+# Protection
+protection <- final %>% select(secu_incident_comp,
+                               documentation_comp,
+                               eviction_comp,
+                               restriction_comp,
+                               exploitation_comp,
+                               missing_comp,
+                               psycho_distress_comp, 
+                               protection_index) %>% as.data.frame
+
+protection <- protection[c(1:200),]
+protection %>% write.csv("output/protection.csv")
+
 # IMPACT 
 impact <- final %>% select(access_uxo_comp, access_route_comp,
                            people_displacement_comp,
@@ -79,13 +93,15 @@ library("msni19")
 
 msni19::msni
 
-final$msni_nga <- msni(final$education_index, final$foodsec_index, final$health_index, 
-                 final$protection_index, final$shelter_index, final$wash_index, 
-                 final$coping_gap_index,final$impact_index, final$earlyrecovery_index)
+final$msni_nga <- msni(education_lsg= final$education_index, fsl_lsg= final$foodsec_index, 
+                       health_lsg = final$health_index, protection_lsg = final$protection_index,
+                       shelter_lsg = final$shelter_index, wash_lsg= final$wash_index,
+                       capacity_gaps = final$coping_gap_index, impact = final$impact_index, final$earlyrecovery_index)
+
 
 
 overall_with_msni <- final %>% select(education_index, foodsec_index,health_index, 
                  protection_index, shelter_index, wash_index, 
-                 coping_gap_index,impact_index, earlyrecovery_index, msni_nga)
+                 coping_gap_index,impact_index, earlyrecovery_index)
 
 overall_with_msni %>% str
